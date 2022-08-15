@@ -17,7 +17,4 @@ Cristian Camilo Arce: Es una persona dedicada, comprometida, responsable en busc
 5)	https://www.adidas.co/
 6)	https://www.colorblue.com.co/?gclid=Cj0KCQjwrs2XBhDjARIsAHVymmQT8fyRUhk-SMXai3LqCftGCiFYu6SOZkHXNlm3Jg7TSeJu2bo0yawaAp3oEALw_wcB
 
-Estos sitios fueron elegidos ya que cuentan con características muy atractivas que facilitan la interacción con la plataforma de los productos los cuales presentan la información de una forma amigable.
-
-
-
+Estos sitios fueron elegidos porque cuentan con características muy atractivas que facilitan la interacción con la plataforma de los productos los cuales presentan la información de una forma amigable.
