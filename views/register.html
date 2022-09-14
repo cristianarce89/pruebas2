@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Register</title>
+    <link rel="stylesheet" href="/register.css">
+    <script src="https://kit.fontawesome.com/8945ba6e2e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main class="main">
+        <img class="logo" src="https://i.postimg.cc/yxqy1x1f/logo.png" alt="">
+        <form class="container" action="/register" method="POST">
+            <h1 class="title">Suscríbete</h1>
+            <input class="campo" type="text" placeholder="Nombres">
+            <input class="campo" type="text" placeholder="Apellidos">
+            <input class="campo" type="email" placeholder="Correo Electrónico">
+            <input class="campo" type="number" placeholder="Télefono Celular">
+            <select class="campo" name="" id="">
+                <option value="none" disabled selected>Elija su tipo de documento </option>
+                <option value="tarjeta">Tarjeta de identidad</option>
+                <option value="cedula">Cédula de ciudadania</option>
+                <option value="extranjera">Cédula extrenjera</option>
+            </select>
+            <input class="campo" type="number" placeholder="Número de Documento">
+            <div class="container_date">
+                <label class="date" for="fecha">Fecha de nacimiento</label>
+                <input class="date" type="date" id="fecha" name="fDnacimiento" required>
+            </div>
+            <select class="campo" name="" id="">
+                <option value="" disabled selected>Elija su género</option>
+                <option value="mujer">Mujer</option>
+                <option value="hombre">Hombre</option>
+                <option value="otro">Otro</option>
+                <option value="no">No quiero decirlo</option>
+            </select>
+
+            <div class="campo_terminos">
+                <input type="checkbox" name="tipousuario" required>
+                <span class="important">Acepto los términos y condiciones</span> <span> y las</span><span class="important"> políticas de privacidad del sitio</span>
+            </div>
+            <div class="campo_terminos">
+                <input type="checkbox" name="tipousuario" required>
+                <span> Acepto resibir informacion sobre novedades, ofertas,descuentos, promociones,
+                    eventos y mucho más</span>
+            </div>
+            <button class="button" type="submit">Enviar</button>
+            
+        </form>
+    </main>
+</body>
+
+</html>
