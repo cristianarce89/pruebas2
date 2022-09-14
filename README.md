@@ -19,3 +19,7 @@ Cristian Camilo Arce: Es una persona dedicada, comprometida, responsable en busc
 
 Estos sitios fueron elegidos porque cuentan con características muy atractivas que facilitan la interacción con la plataforma de los productos los cuales presentan la información de una forma amigable.
 
+
+TABLERO TRELLO 
+
+https://trello.com/b/lyqfnK1D/reeadni
