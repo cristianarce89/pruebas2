@@ -1,0 +1,884 @@
+/* font-family: 'Indie Flower', cursive;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Rubik Marker Hatch', cursive; */
+
+/*hace referencia a nuestro html, para declarar variables en css*/
+:root {
+    --texto-principal: 'Roboto', sans-serif;
+    --texto-segundario: 'Open Sans', sans-serif;
+    --texto-comentarios: 'Indie Flower', cursive;
+    --texto-tituloComentarios: 'Rubik Marker Hatch', cursive;;
+    --color-fondo: #ffffff;
+    --color-grisTenue: #f5f5f5;
+    --color-gris: #7e7e7e;
+    --color-oscuro: #111111;
+}
+
+* {
+    /*para q no se añada el padding y el border de mas y no genere scroll*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: var(--texto-principal);
+}
+
+html {
+    /*esto es para que un rem equivale a 1.0; 1rem= 10px; 1.8rem= 18px;*/
+    font-size: 62.5%;
+    text-decoration: none;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/*-------------------------------MENU DESPLEGABLE PARA CEL---------------------------------*/
+.nav-cel-tablet {
+    width: 100%;
+    position: sticky;
+    /*Con esto me permite fijar y bajar hasta donde termina el header*/
+    top: 0;
+    /*lo deja fijo hacia arriba*/
+    background-color: #ffffff;
+}
+
+.main-content {
+    padding-top: 1rem;
+}
+
+.nav-cel-tablet {
+    height: 8rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.container-logoHeader {
+    margin: 0 auto;
+}
+
+.header_logo {
+    width: 16rem;
+    height: 6rem;
+}
+
+.bar-btn {
+    width: 12rem;
+    margin-left: 4rem;
+    font-size: 2.5rem;
+    color: #111111;
+    cursor: pointer;
+}
+
+.icon-user {
+    width: 12rem;
+    display: flex;
+    justify-content: space-around;
+    font-size: 2.5rem;
+    margin-right: 2rem;
+}
+
+.nav-menu {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: calc(100vh - 8rem);
+    top: 8rem;
+    background: rgba(0, 0, 0);
+    text-align: center;
+    transition: all .5s;
+}
+
+.hamburger_logo {
+    width: 16rem;
+    height: 10rem;
+    margin: 0 auto;
+}
+
+
+.hamburger_logo:hover {
+    transform: scale(1.4);
+    transition: .6s;
+}
+
+.nav-menu li {
+    line-height: 3rem;
+    margin: 3rem 0;
+    transition: all 1.5s;
+}
+
+.nav-menu li a {
+    color: #ffffff;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.nav-menu li a:hover {
+    color: var(--color-gris);
+    transition: .6s;
+}
+
+#checkbox {
+    display: none;
+}
+
+#checkbox:checked~.nav-menu {
+    display: block;
+}
+
+/*----------------BARRA NAVEGADOR DESKTOP----------------------------*/
+.interior{
+    display: flex;
+    position: sticky;
+    top:0;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 8rem;
+	padding: 0 1rem;
+	margin: auto;
+    background-color: #000000;
+
+}
+
+.logo-header-desk1{
+    width: 30rem;
+    padding-left: 4rem;
+}
+
+.logo-header-desk1 img{
+	height: 7rem; 
+}
+
+.logo-header-desk1 img:hover{
+	transform: scale(1.1); /* Para tener acercamiento */
+}
+
+.container-busqueda{
+    display: flex;
+    color: var(--color-gris);
+}
+
+.bar-busqueda{
+    position: relative;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    padding-left: 3rem;
+    border: 1px solid #dfe1e5;
+
+}
+
+.bar-busqueda:hover{
+    transform: scale(1.1);
+    border-color: var(--color-gris);
+    transition: all 0.35s;
+}
+
+
+.container-busqueda i{
+    position: absolute;
+    color: var(--color-gris);
+    font-size: 1.8rem;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.navegacion{
+	display: flex;
+	align-items: center;
+	z-index: 1000;
+}
+
+.navegacion ul{
+    display: flex;
+	list-style: none;
+	padding: 0 1rem;
+}
+.navegacion ul li{
+	position: relative;
+	transition: .3s linear;
+	z-index: 1000;
+}
+
+.navegacion ul li:hover{
+	transform: scale(1.1);
+}
+
+.navegacion ul li a{
+	color: var(--color-fondo);
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.8rem;
+    font-family: var(--texto-tituloComentarios);
+	padding: 12px 20px;
+	transition: .3s linear;
+}
+
+.navegacion ul li a:hover{
+	color: var(--color-gris);
+	transform: scale(1.1);
+}
+
+/* INTERIOR2 */
+
+.interior2{
+    display: flex;
+    width: 100%;
+    height: 5rem;
+	padding: 0 10px;
+	margin: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-gris);
+}
+
+.navegacion2{
+    width: 55%;   
+	z-index: 1000;
+}
+
+.navegacion2 ul{
+    display: flex;
+    width: 100%;
+	list-style: none;
+	padding: 0 1rem;
+    justify-content:space-between;
+
+}
+
+.navegacion2 ul li{
+	position: relative;
+	transition: .3s linear;
+	z-index: 1000;
+}
+
+.navegacion2 ul li:hover{
+	transform: scale(1.1);
+}
+
+.navegacion2 ul li a{
+	color: var(--color-fondo);
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-size: 1.8rem;
+    font-family: var(--texto-tituloComentarios);
+	padding: 1.2rem 2rem;
+	transition: .3s linear;
+}
+
+.navegacion2 ul li a:hover{
+	color: #444444;
+	transform: scale(1.1);
+}
+
+.navegacion2 .submenu .hijos{
+	display: none;
+	background: var(--color-gris);
+	position: absolute;
+	width: 100%;
+}
+
+.navegacion2 ul li:hover .hijos{
+	display: block;
+}
+
+
+.navegacion2 .submenu .hijos li{
+	display: block;
+	overflow: hidden;
+	border-bottom: none;
+}
+
+.navegacion2 .submenu .hijos li a{
+	display: block;
+}
+
+/* --------------ACORDEON DE IMAGENES GRANDE--------------- */
+.container-slider{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.carrousel-g{
+    width: 100%;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
+} 
+
+.conteCarrousel-g{
+    width: 100%;
+    height: 50rem;
+    overflow: hidden;
+}
+
+.itemCarrousel-g{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.itemCarrouselTarjeta-g{
+    width: 100%;
+    height: 100%;
+} 
+
+.itemCarrouselArrows-g{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2rem; 
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 0;
+} 
+
+.itemCarrouselArrows-g > i:hover {
+    cursor: pointer;
+}
+
+.conteCarrouselController-g{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 2rem;
+}
+
+.conteCarrouselController-g > a{
+    display: flex;
+    text-decoration: none;
+    font-size: 4rem;
+    height: 4rem;
+    color: grey;
+    padding-left: 15px;
+}
+
+.itemCarrouselArrows-g > a > i{
+    color: #111111;
+    font-size: 4rem;
+}
+
+.itemCarrouselTarjeta-g img{
+    width: 100%;
+    height: 100%;
+}
+
+/*-----------------------------IMAGENES GENERO-------------------------*/
+.titulo-compra {
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0;
+    font-family: var(--texto-tituloComentarios);
+    text-transform: uppercase;
+    font-size: 3.5rem;
+}
+
+.container-genero{
+    width: 98%;
+    margin: 0 auto;
+    max-width: 39rem;   
+}
+
+.container-genero img {
+    display: block;
+    width: 100%;
+    height: 25rem; 
+    margin: 0 auto;
+    /* margin-top: 2rem;    */
+    transition: all 0.4s ease;
+    /* Esto hace animacion a la sombra que le ponemos */
+}
+
+.container-genero img:hover {
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 1);
+}
+
+.container-genero a {
+    width: 100%;
+    display: block;
+    padding: 2rem;
+    font-family: var(--texto-tituloComentarios);
+    font-size: 2rem;
+    text-align: center; 
+    text-transform: uppercase;  
+    transition: all 0.4s ease;
+    color: #000000;
+    /* Esto hace animacion a la sombra que le ponemos*/
+}
+
+.container-genero a:hover {
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+}
+
+    /* -------------------SECCION LOOKS---------------------- */
+
+.info-looks{
+    text-align: center;
+}
+
+.info-looks h1{
+    margin: 2rem auto;
+    font-size: 3.5rem;
+    font-family: var(--texto-tituloComentarios);
+}
+
+.info-looks h2{
+    margin: 1rem auto;   
+    font-family: var(--texto-comentarios);
+    font-size: 2rem;
+}
+
+.info-looks p{
+    font-family: var(--texto-comentarios);
+    font-size: 1.8rem;
+}
+
+.info-looks span{
+    font-weight: bold;
+    font-family: var(--texto-comentarios);
+    font-size: 2rem;
+}
+
+        /* ---------------SLIDER MOVIL SWIPER-----------------------------*/
+
+    html,
+    body {
+        position: relative;
+        height: 100%;
+    }  
+
+.swiper {
+    width: 100%;
+    height: 40rem;
+    margin: 2rem 0;
+}
+        
+.swiper-slide {
+    text-align: center;
+    font-size: 1.8rem;
+    background: #fff;
+        
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+        
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*-------------  SECCION DESTACADOS --------------------*/
+
+.dest-title h1 {
+    width: 100%;
+    text-align: center;
+    font-family: var(--texto-tituloComentarios);
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    margin: 4rem 0 2rem 0;
+}
+
+.dest-title p {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-family: var(--texto-comentarios);
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.container-destacados {
+    margin-bottom: 4rem;
+}
+
+.carrousel {
+    width: 90%;
+    position: relative;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    max-width: 35rem;
+    /* hasta este tamaño se ancha el slider de calzado*/
+}
+
+.conteCarrousel {
+    width: 100%;
+    height: 20rem;
+    /*cambiar el tamaño de la tarjeta del slider*/
+    overflow: hidden;
+}
+
+.itemCarrousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.itemCarrouselTarjeta {
+    width: 100%;
+    height: 100%;
+}
+
+.itemCarrouselTarjeta h1 {
+    display: block;
+}
+
+.itemCarrouselTarjeta img {
+    display: block;
+    /* para centrar las imagenes de los slider */
+    margin: 0 auto;
+    /* para centrar las imagenes de los slider */
+    width: 75%;
+    height: 100%;
+}
+
+.itemCarrouselArrows {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0;
+}
+
+.itemCarrouselArrows>i:hover {
+    cursor: pointer;
+}
+
+.conteCarrouselController {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+.conteCarrouselController>a {
+    display: flex;
+    text-decoration: none;
+    font-size: 40px;
+    /*tamaño de los botones grises para seleccionar slider */
+    height: 15px;
+    /*altura de los botones*/
+    color: grey;
+    padding-left: 10px;
+}
+
+.itemCarrouselArrows>a>i {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 2.4rem;
+    /*tamaño de las flechas izquierda y derecha */
+}
+
+.detalleProducto h2 {
+    width: 100%;
+    text-align: center;
+    font-family: var(--texto-tituloComentarios);
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-top: 0.5rem;
+}
+
+.detalleProducto h3,
+p {
+    width: 100%;
+    text-align: center;
+    font-family: var(--texto-comentarios);
+    font-size: 2rem;
+}
+
+.detalleProducto p {
+    margin-bottom: 2.5rem;
+}
+
+/* ----------SLIDER INFINITO DE MARCAS -----------------*/
+
+.slider-infinito {
+    width: 100%;
+    height: auto;
+    margin: 2rem, 0, 0, 0;
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    -webkit-animation: scroll 20s linear infinite;
+    width: calc(20rem * 12);
+}
+
+.slider-logos {
+    width: 20rem;
+    height: 8rem;
+    /* espacion entre contenedores*/
+}
+
+.slider-logos img {
+    width: 100%;
+    height: 7rem;
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(calc(-20rem * 4));
+        transform: translateX(calc(-20rem * 4));
+    }
+}
+
+/* --------------------FOOTER--------------------------- */
+
+.container-footer {
+    background-color: var(--color-oscuro);
+    font-family: var(--texto-principal);
+    padding: 2rem 0 0.5rem 0;
+}
+
+.locales-cercanos h2 {
+    color: var(--color-fondo);
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    padding-left: 2rem;
+}
+
+.container-footer span {
+    color: var(--color-gris);
+    padding: 1rem 0;
+    padding-left: 0.5rem;
+}
+
+.container-footer h1 {
+    color: var(--color-fondo);
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    padding-left: 2rem;
+}
+
+.acerca-reeadni p{
+    color: var(--color-grisTenue);
+    font-size: 1.2rem;
+    font-family: var(--texto-principal);
+    text-align: left;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.container-icons {
+    display: flex;
+    width: 50%;
+    max-width: 24.4rem;
+    padding: 2rem 0;
+    padding-left: 0.5rem;
+}
+
+.container-icons i {
+    margin: 0 auto;
+    font-size: 3rem;
+    color: var(--color-gris);
+}
+
+.ubicacion i {
+    color: var(--color-fondo);
+    padding: 1rem 0;
+    padding-left: 2rem;
+}
+
+.ubicacion {
+    margin-bottom: 1rem;
+}
+
+.ubicacion span {
+    color: var(--color-fondo);
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: 1rem;
+}
+
+.derechos-reservados p {
+    color: var(--color-grisTenue);
+    font-size: 1.2rem;
+    font-family: var(--texto-principal);
+    text-align: left;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.terminos-politicas p {
+    color: var(--color-grisTenue);
+    font-size: 1.2rem;
+    font-family: var(--texto-principal);
+    text-align: left;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+/*--------------MEDIA QUERIES TABLET---------------------*/
+@media (max-width: 768px) {
+    .container-slider{
+        display: none;
+    }
+
+    .content-section-genero-main{
+        display: none;
+    }
+
+    .interior{
+        display: none;
+    }
+
+    .interior2{
+        display: none;
+    }
+}
+
+@media (max-width: 481px){
+    .acerca-reeadni{
+        display: none;
+    }
+
+
+}
+
+@media (min-width: 481px) {
+
+.container-genero img {
+    width: 100%;
+    height: 40rem;
+} 
+
+.carrousel {
+    width: 95%;
+    max-width: 57rem;
+}
+
+.conteCarrousel {
+    height: 40rem;
+    /*cambiar el tamaño de la tarjeta del slider*/
+}
+
+.itemCarrouselTarjeta img {
+    width: 100%;
+}
+
+.container-locales {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-ubicacion-derechos{
+    display: flex;
+}
+
+.linea-separadora{
+    display: none;
+}
+
+.container-ubicacion-derechos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ubicacion {
+    margin-bottom: 0;
+}
+
+.derechos-reservados p{
+    margin-bottom: 0;
+}
+
+.terminos-politicas{
+    display: flex;
+    min-width: 40rem;
+}
+
+.terminos-politicas p{
+    margin-bottom: 0;
+}
+
+.acerca-reeadni{
+    margin-right: 10rem;
+}
+
+}
+
+@media (min-width: 769px) { 
+
+.nav-cel-tablet{
+    display: none;
+}
+
+.container-img-genero {
+    padding: 0 2rem;
+    display: flex;        
+    padding-top: 1rem;   
+    gap: 2rem;   
+} 
+
+.container-genero img {
+    width: 100%;
+    height: 40rem;
+    }
+
+.container-genero a:hover{
+    background-color: #037bc0;
+    color: #fff;
+    border-bottom-right-radius: 1rem;
+    transition: all 0.4s ease;
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+}
+
+.content-section-genero{
+    display: none;
+}
+
+.acerca-reeadni{
+    margin-right: 30rem;
+}
+
+}
+
+@media (min-width: 950px) { 
+    .acerca-reeadni{
+        margin-right: 40rem;
+    }
+}
