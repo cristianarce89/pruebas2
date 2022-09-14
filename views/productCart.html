@@ -1,158 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carrito de compras</title>
     <!--link css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans:wght@300&family=Roboto:wght@100;400&family=Rubik+Marker+Hatch&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/productCart.css">
-    <!--caja de iconos--> 
+    <!--caja de iconos-->
     <link href="stylesheet" rel="stylesheet">
 </head>
+
 <body>
-    
-    <!-- header -->
     <header>
-        <!-- Nav-->
-        <!--<img src="/images/fondoTienda.jpg" alt="" class="imagen-fondo">-->
-            
-            <!--card icons-->
-            <i class='bx bx-shopping-bag' id="cart-icon"></i>
-            <!--cart-->
-            <div class="cart">
-                <h2 class="cart-title">Tu Compra</h2>
-                <!--Content-->
-                <div class="cart-content">
-                    <a href="#" class="logo">Articulos</a>
-                    <div class="nav-container">
+        <!--------- BARRA NAVEGADOR DESKTOP ---------->
+        <div class="interior">
+            <a href="/" class="logo-header-desk1" target="blank">
+                <img src="https://i.postimg.cc/7YbJJNCj/logo-negro.jpg" alt="Logo">
+            </a>
+            <div class="container-busqueda">
+                <input class="bar-busqueda" type="text" placeholder="Buscar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <nav class="navegacion">
+                <ul>
+                    <li>
+                        <a href="register.html" target="blank">Registrate
+                            <i class="fa-solid fa-id-card"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="login.html" target="blank">Iniciar Sesion
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="productCart.html" target="blank">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="interior2">
+            <nav class="navegacion2">
+                <ul>
+                    <li>
+                        <a href="" target="blank">Hombres</a>
+                    </li>
+                    <li>
+                        <a href="" target="blank">Mujeres</a>
+                    </li>
+                    <li>
+                        <a href="" target="blank">Niños</a>
+                    </li>
+                    <li class="submenu">
+                        <a href="" target="blank">Productos</a>
+                        <ul class="hijos">
+                            <li><a href="">Reebok</a></li>
+                            <li><a href="">Adidas</a></li>
+                            <li><a href="">Nike</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!--card icons-->
+        <i class='bx bx-shopping-bag' id="cart-icon"></i>
+        <!--cart-->
+        <div class="cart">
+            <h2 class="cart-title">Tu Compra</h2>
+            <!--Content-->
+            <div class="cart-content">
+                <a href="#" class="logo">Articulos</a>
+                <div class="nav-container">
                     <div class="cart-box">
                         <div class="detail-box">
                             <div class="cart-product-title">OWN THE GAME</div>
                             <div class="cart-price">$299.990</div>
                             <input type="number" value="1" class="cart-quantity">
-                        </div>    
+                        </div>
                         <div class="detail-box">
                             <div class="cart-product-title">W JOYRIDE</div>
                             <div class="cart-price">$379.990</div>
                             <input type="number" value="1" class="cart-quantity">
-                        </div>    
+                        </div>
                         <div class="detail-box">
                             <div class="cart-product-title">CLASSIC LEATHER</div>
                             <div class="cart-price">$329.990</div>
                             <input type="number" value="1" class="cart-quantity">
-                        </div>    
+                        </div>
                         <div class="detail-box">
                             <div class="cart-product-title">Star Runner 2 TDV-ICED </div>
-                            <div class="cart-price">$159.990</div> 
+                            <div class="cart-price">$159.990</div>
                             <input type="number" value="1" class="cart-quantity">
-                        </div>    
                         </div>
-                        <!-- Remove Cart-->
-                        <i class='bx bxs-trash-alt cart-remove'></i>
                     </div>
+                    <!-- Remove Cart-->
+                    <i class='bx bxs-trash-alt cart-remove'></i>
                 </div>
-                <!-- Total -->
-                <div class="total">
-                    <div class="total-title">Total</div>
-                    <div class="total-price">$0</div>
-                </div>
-                <!-- Buy Button -->
-                <button type="button" class="btn-buy">Comprar Ahora</button>
-                <!-- Cart Close-->
-                <i class='bx bx-x' id="close cart"></i>
-                            
             </div>
+            <!-- Total -->
+            <div class="total">
+                <div class="total-title">Total</div>
+                <div class="total-price">$0</div>
+            </div>
+            <!-- Buy Button -->
+            <button type="button" class="btn-buy">Comprar Ahora</button>
+            <!-- Cart Close-->
+            <i class='bx bx-x' id="close cart"></i>
         </div>
-    </header>
+        </div>
+    </main>
+
     <!--Shop-->
-    
+
     <section class="shop-container">
         <h2 class="section-title">Tu Carrito de Compras</h2>
         <!-- content -->
         <div class="shop-content">
-        <!--Box 1-->
-            <div class="product-box">
-                <!--<img src="images/addidas_1.jpg" alt="" class="product-img">-->
+
+            <!--Box 1-->
+            <div class="product-box">                
                 <img src="https://i.postimg.cc/GtqKFtNS/addidas-1.jpg" alt="" class="product-img">
                 <h2 class="product-title">CRAZYCHAOS SHADOW</h2>
                 <h2 class="price">Adidas</h2>
                 <span class="price">Hombre Sportswear</span>
-                <h4 class="price">$339.990</h4>
-                <!--<i class='bx bxs-trash-alt add-cart'></i>-->
-                <input type="number" value="1" class="cart-quantity">
-                <!--<i class='bx bxs-trash-alt' class="delete"></i>-->
+                <h4 class="price">$339.990</h4>  
+                <input type="number" value="1" class="cart-quantity">               
                 <button type="button" class="btn-borrar">Eliminar</button>
-                </div>
-                
+            </div>
 
-                <div class="product-box">
+
+            <div class="product-box">
                 <img src="https://i.postimg.cc/G3QXwg2J/addidas-2.jpg" alt="" class="product-img">
                 <h2 class="product-title">OWN THE GAME</h2>
                 <h2 class="price">Adidas</h2>
                 <span class="price">Hombre Sportswear</span>
                 <h4 class="price">$299.990</h4>
-                <!--<i class='bx bx-shopping-bag add-cart' ></i>-->
                 <input type="number" value="1" class="cart-quantity">
                 <button type="button" class="btn-borrar">Eliminar</button>
-                </div>
-                
-                <div class="product-box">
+            </div>
+
+            <div class="product-box">
                 <img src="https://i.postimg.cc/nzxGNqfP/addidas-3.jpg" alt="" class="product-img">
                 <h2 class="product-title">FORUM CL CORTE BAJO</h2>
                 <h2 class="price">Adidas</h2>
                 <span class="price">Hombre originals - exclusivo</span>
                 <h4 class="price">$469.900</h4>
-                <!--<i class='bx bx-shopping-bag add-cart' ></i>-->
                 <input type="number" value="1" class="cart-quantity">
                 <button type="button" class="btn-borrar">Eliminar</button>
-                </div>
-                
-                <div class="product-box-mujer">
+            </div>
+
+            <div class="product-box-mujer">
                 <img src="https://i.postimg.cc/c4LXs7tq/nike-1.jpg" alt="" class="product-img">
                 <h2 class="product-title">W JOYRIDE</h2>
                 <h2 class="price">Nike</h2>
                 <span class="price">Mujer Run 2 Pod</span>
                 <h4 class="price">$379.900</h4>
-                <!--<i class='bx bx-shopping-bag add-cart' ></i>-->
                 <input type="number" value="1" class="cart-quantity">
                 <button type="button" class="btn-borrar">Eliminar</button>
-                </div>
-                
-                <div class="product-box">
+            </div>
+
+            <div class="product-box">
                 <img src="https://i.postimg.cc/Bn8pFqCM/nike-2.jpg" alt="" class="product-img">
                 <h2 class="product-title">REVOLUTION 6-P</h2>
                 <h2 class="price">Nike</h2>
                 <span class="price">Hombre Mrn Bl-Wr</span>
                 <h4 class="price">$337.900</h4>
-                <!--<i class='bx bx-shopping-bag add-cart' ></i>-->
                 <input type="number" value="1" class="cart-quantity">
                 <button type="button" class="btn-borrar">Eliminar</button>
-                </div>
-                
-                <div class="product-box-niños">
+            </div>
+
+            <div class="product-box-niños">
                 <img src="https://i.postimg.cc/X71xXZ9r/nike-3.jpg" alt="" class="product-img">
                 <h2 class="product-title">Star Runner 2 TDV-ICED</h2>
                 <h2 class="price">Nike</h2>
                 <span class="price">Niños Noir-Soar-Wht</span>
                 <h4 class="price">$159.900</h4>
-                <!--<i class='bx bx-shopping-bag add-cart' ></i>-->
                 <input type="number" value="1" class="cart-quantity">
                 <button type="button" class="btn-borrar">Eliminar</button>
-                </div>
-                
-                <div class="product-box-mujer">
+            </div>
+
+            <div class="product-box-mujer">
                 <img src="https://i.postimg.cc/Jz9qc96m/reebok-1.jpg" alt="" class="product-img">
                 <h2 class="product-title">CLASSIC LEATHER LEGACY AZ</h2>
                 <h2 class="price">Reebook</h2>
                 <span class="price">Mujer Classics</span>
                 <h4 class="price">$359.900</h4>
-                <!--<i class='bx bx-shopping-bag add-cart'></i>-->
                 <input type="number" value="1" class="cart-quantity">
                 <button type="button" class="btn-borrar">Eliminar</button>
-                </div>
+            </div>
 
-                <div class="product-box">
+            <div class="product-box">
                 <img src="https://i.postimg.cc/wvkQz36T/reebok-2.jpg" alt="" class="product-img">
                 <h2 class="product-title">CLASSIC LEATHER</h2>
                 <h2 class="price">Reebook</h2>
@@ -161,12 +210,10 @@
                 <!--<i class='bx bx-shopping-bag add-cart'></i>-->
                 <input type="number" value="1" class="cart-quantity">
                 <button type="button" class="btn-borrar">Eliminar</button>
-                </div>
             </div>
-
         </div>
     </section>
 
-    
 </body>
+
 </html>

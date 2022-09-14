@@ -23,10 +23,13 @@ html {
 }
 
 /*----------------BARRA NAVEGADOR DESKTOP----------------------------*/
+header{
+    position: sticky;
+    top: 0;
+}
+
 .interior{
     display: flex;
-    position: sticky;
-    top:0;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -110,6 +113,11 @@ html {
 	transition: .3s linear;
 }
 
+/* .fa-cart-shopping{
+    color: var(--color-fondo);
+} */
+
+
 .navegacion ul li a:hover{
 	color: var(--color-gris);
 	transform: scale(1.1);
@@ -119,12 +127,9 @@ html {
 
 .interior2{
     display: flex;
-    position: sticky;
-    top:8rem;
     width: 100%; 
     height: 5rem;
 	padding: 0 10px;   
-	margin: auto;
     justify-content: center;
     align-items: center;
     background-color: var(--color-gris);
@@ -184,7 +189,7 @@ html {
 
 .navegacion2 .submenu .hijos li{
 	display: block;
-	overflow: hidden;
+	overflow:hidden;
 	border-bottom: none;
 }
 
