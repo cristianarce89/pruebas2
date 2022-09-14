@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Reeadni</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans:wght@300&family=Roboto:wght@100;400&family=Rubik+Marker+Hatch&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/login.css">
+    <script src="https://kit.fontawesome.com/8945ba6e2e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <!--------- BARRA NAVEGADOR DESKTOP ---------->
+        <div class="interior">
+            <a href="/" class="logo-header-desk1" target="blank">
+                <img src="https://i.postimg.cc/7YbJJNCj/logo-negro.jpg" alt="Logo">
+            </a>
+            <div class="container-busqueda">
+                <input class="bar-busqueda" type="text" placeholder="Buscar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <nav class="navegacion">
+                <ul>
+                    <li>
+                        <a href="register.html" target="blank">Registrate
+                            <i class="fa-solid fa-id-card"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="login.html" target="blank">Iniciar Sesion
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="productCart.html" target="blank">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="interior2">
+            <nav class="navegacion2">
+                <ul>
+                    <li>
+                        <a href="" target="blank">Hombres</a>
+                    </li>
+                    <li>
+                        <a href="" target="blank">Mujeres</a>
+                    </li>
+                    <li>
+                        <a href="" target="blank">Niños</a>
+                    </li>
+                    <li class="submenu">
+                        <a href="productDetail.html" target="blank">Productos</a>
+                        <ul class="hijos">
+                            <li><a href="">Reebok</a></li>
+                            <li><a href="">Adidas</a></li>
+                            <li><a href="">Nike</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <form class="formulario" action="/" method="POST">
+            <div class="login">
+                <a href="/" target="blank">
+                    <img class="logo" src="https://i.postimg.cc/yxqy1x1f/logo.png" alt="logo">
+                </a>
+                <div class="container">
+                    <h2 class="container_title">Usuario</h2>
+                    <input class="container_name" type="text" placeholder="Ingrese su nombre de usuario">
+                    <h2 class="container_title">Contraseña</h2>
+                    <input class="container_password" type="text" placeholder="Ingrese su contraseña">
+                    <div class="container_checkbox">
+                        <div class="recordarme">
+                            <input type="checkbox">
+                            <span>Recordarme</span>
+                        </div>
+                        <button class="container_enter">Entrar</button>
+                    </div>
+                    <p class="password">Olvidé mi contraseña</p>
+                </div>
+
+                <button class="return" type="submit">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Regresar a ReeadNi
+                </button>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
