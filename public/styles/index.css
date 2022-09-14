@@ -28,6 +28,8 @@ font-family: 'Rubik Marker Hatch', cursive; */
 html {
     /*esto es para que un rem equivale a 1.0; 1rem= 10px; 1.8rem= 18px;*/
     font-size: 62.5%;
+    text-decoration: none;
+    list-style: none;
 }
 
 img {
@@ -96,6 +98,8 @@ img {
 .hamburger_logo {
     width: 16rem;
     height: 10rem;
+    margin: 0 auto;
+
 }
 
 .hamburger_logo:hover {

@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans:wght@300&family=Roboto:wght@100;400&family=Rubik+Marker+Hatch&display=swap" rel="stylesheet">
     <link href="styles/index.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" rel="stylesheet">
@@ -28,9 +26,15 @@
                 <img class=header_logo src="https://i.postimg.cc/yxqy1x1f/logo.png" alt="logo_readme">
             </div>
             <div class="icon-user">
-                <i class="fa-solid fa-user"></i>
-                <i class="fa-solid fa-id-card"></i>
-                <i class="fa-solid fa-cart-shopping"></i>
+                <a href="login.html">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+                <a href="register.html">
+                    <i class="fa-solid fa-id-card"></i>
+                </a>
+                <a href="productCart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
             </div>
             <input type="checkbox" id="checkbox">
             <ul class="nav-menu">
@@ -39,7 +43,7 @@
                     <img class="hamburger_logo" src="https://i.postimg.cc/yxqy1x1f/logo.png" alt="logo_readme">
                 </li>
                 <li><a class="active" href=#>Mujer</a></li>
-                <li><a href=#>Hombre</a></li>
+                <li><a href="#">Hombre</a></li>
                 <li><a href=#>Niños</a></li>
                 <li><a href=#>Marcas</a></li>
                 <li><a href=#>Registrarse</a></li>
@@ -48,7 +52,7 @@
 
         <!--------- BARRA NAVEGADOR DESKTOP ---------->
         <div class="interior">
-            <a href="" class="logo-header-desk1" target="blank">
+            <a href="" class="logo-header-desk1" target="blank" action="/" method="post">
                 <img src="https://i.postimg.cc/7YbJJNCj/logo-negro.jpg" alt="Logo">
             </a>
             <div class="container-busqueda">
@@ -59,17 +63,17 @@
             <nav class="navegacion">
                 <ul>
                     <li>
-                        <a href="" target="blank">Registrate
+                        <a href="register.html" target="blank">Registrate
                         <i class="fa-solid fa-id-card"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="" target="blank">Iniciar Sesion
+                        <a href="login.html" target="blank">Iniciar Sesion
                         <i class="fa-solid fa-user"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="" target="blank">
+                        <a href="productCart.html" target="blank">
                             <i class="fa-solid fa-cart-shopping"></i>
                         </a>
                     </li>

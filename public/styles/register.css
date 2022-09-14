@@ -1,9 +1,16 @@
-* {
-    /*para q no se añada el padding y el border de mas y no genere scroll*/
+* {    
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
+
+html {
+    /*esto es para que un rem equivale a 1.0; 1rem= 10px; 1.8rem= 18px;*/
+    font-size: 62.5%;
+    text-decoration: none;
+    list-style: none;
+}
+
 .logo{
     width: 300px;
     margin: 20px;

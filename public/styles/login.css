@@ -1,10 +1,15 @@
-* {
-    
+* {    
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
+html {
+    /*esto es para que un rem equivale a 1.0; 1rem= 10px; 1.8rem= 18px;*/
+    font-size: 62.5%;
+    text-decoration: none;
+    list-style: none;
+}
 
 .login {
     display: flex;
@@ -15,18 +20,18 @@
 }
 
 .logo {
-    width: 20rem;
-    margin: 20px;
+    width: 30rem;
+    margin: 2rem;
 }
 
 .container_title {
-    margin-top: 20px;
+    margin-top: 2rem;
+    font-size: 2rem;
 }
 
 .container_name {
-    width: 15rem;
-    padding: 5px;
-
+    width: 25rem;
+    padding: 0.5rem;
 }
 
 /* .container-login-user_name::placeholder {
@@ -34,35 +39,38 @@
 } */
 
 .container_password {
-    width: 15rem;
-    padding: 5px;
+    width: 25rem;
+    padding: 0.5rem;
 }
 
 .container_checkbox {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-top: 20px;
+    margin-top: 2rem;
+}
+
+.recordarme span{
+    font-size: 1.5rem;
 }
 
 .container_enter {
-    width: 5rem;
-    padding: 5px;
+    width: 10rem;
+    padding: 0.5rem;
     background-color: black;
     color: white;
-
 }
 
 .password {
-    margin-left: 100px;
-    margin-top: 13px ;
+    margin-left: 12rem;
+    margin-top: 1.3rem ;
+    font-size: 1.5rem;
 
 }
 .return{
-    width: 15rem;
-    padding: 5px;
-    margin-top: 20px ;
+    width: 25rem;
+    padding: 0.5rem;
+    margin-top: 2rem ;
     background-color: black;
-    color: white;
-    
+    color: white;    
 }

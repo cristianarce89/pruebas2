@@ -32,3 +32,6 @@ app.get('/productDetail.html', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/productDetail.html'));
 });
 
+app.post("/",(req,res)=>{
+    res.sendFile(path.join(__dirname,"./views/index.html"))
+})
