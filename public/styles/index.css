@@ -670,7 +670,7 @@ p {
 .container-footer {
     background-color: var(--color-oscuro);
     font-family: var(--texto-principal);
-    padding: 2rem 0;
+    padding: 2rem 0 0.5rem 0;
 }
 
 .locales-cercanos h2 {
@@ -696,6 +696,7 @@ p {
 .acerca-reeadni p{
     color: var(--color-grisTenue);
     font-size: 1.2rem;
+    font-family: var(--texto-principal);
     text-align: left;
     padding-left: 2rem;
     margin-bottom: 2rem;
@@ -735,6 +736,7 @@ p {
 .derechos-reservados p {
     color: var(--color-grisTenue);
     font-size: 1.2rem;
+    font-family: var(--texto-principal);
     text-align: left;
     padding-left: 2rem;
     margin-bottom: 1rem;
@@ -743,6 +745,7 @@ p {
 .terminos-politicas p {
     color: var(--color-grisTenue);
     font-size: 1.2rem;
+    font-family: var(--texto-principal);
     text-align: left;
     padding-left: 2rem;
     margin-bottom: 2rem;
@@ -809,6 +812,33 @@ p {
     display: none;
 }
 
+.container-ubicacion-derechos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ubicacion {
+    margin-bottom: 0;
+}
+
+.derechos-reservados p{
+    margin-bottom: 0;
+}
+
+.terminos-politicas{
+    display: flex;
+    min-width: 40rem;
+}
+
+.terminos-politicas p{
+    margin-bottom: 0;
+}
+
+.acerca-reeadni{
+    margin-right: 10rem;
+}
+
 }
 
 @media (min-width: 769px) { 
@@ -841,4 +871,14 @@ p {
     display: none;
 }
 
+.acerca-reeadni{
+    margin-right: 30rem;
+}
+
+}
+
+@media (min-width: 950px) { 
+    .acerca-reeadni{
+        margin-right: 40rem;
+    }
 }

@@ -33,7 +33,6 @@
     color: black;
     font-size: var(--cuerpo-texto); 
     margin-left: 1%;
- 
 }
 .a:hover{
 text-decoration: underline;
@@ -64,7 +63,6 @@ text-decoration: underline;
     color: black;
 } 
 
-
 .texto-calzado {
     font-style: italic;
     font: 24px;
@@ -82,7 +80,6 @@ text-decoration: underline;
 
 .banner{
     width: 100%;
-    margin-top: 2.5%;
 }
 
 .banner img {
@@ -94,8 +91,7 @@ text-decoration: underline;
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-end;
+    justify-content: space-around;
     margin-top: 20px;
     }
 
@@ -117,7 +113,11 @@ text-decoration: underline;
 }
 
 .textoprecio{
-    padding: 10% 1% 10%;
+    padding: 2rem 0.5rem;
+}
+
+.textoprecio h4, p, span{
+    margin-bottom: 0.8rem;
 }
 
 
