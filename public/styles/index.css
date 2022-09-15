@@ -84,6 +84,12 @@ img {
     margin-right: 2rem;
 }
 
+.icon-user i{
+    color: #000000;
+}
+
+
+
 .nav-menu {
     position: fixed;
     display: none;
