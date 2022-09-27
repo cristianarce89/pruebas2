@@ -8,67 +8,21 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans:wght@300&family=Roboto:wght@100;400&family=Rubik+Marker+Hatch&display=swap" rel="stylesheet">
-   <link href="styles/header.css" rel="stylesheet">
-   <link href="/styles/productDetail.css" rel="stylesheet">
+   <link href="/stylesheets/header.css" rel="stylesheet">
+   <link href="/stylesheets/productDetail.css" rel="stylesheet">
+   <link href="/stylesheets/footer.css" rel="stylesheet">
    <link href="styles/normalize.css" rel="stylesheet">
+   <script src="https://kit.fontawesome.com/8945ba6e2e.js" crossorigin="anonymous"></script>
    <title>Document</title>
 </head>
 
 <body>
    <header>
-      <div class="interior">
-         <a href="/" class="logo-header-desk1" target="blank" action="/" method="post">
-            <img src="https://i.postimg.cc/7YbJJNCj/logo-negro.jpg" alt="Logo">
-         </a>
-         <div class="container-busqueda">
-            <input class="bar-busqueda" type="text" placeholder="Buscar">
-            <i class="fa-solid fa-magnifying-glass"></i>
+   <!--------- BARRA NAVEGADOR CELULAR Y TABLET ---------->
+   <%- include('./partials/headerMobile.ejs') %> 
 
-         </div>
-         <nav class="navegacion">
-            <ul>
-               <li>
-                  <a href="register.html" target="blank">Registrate
-                     <i class="fa-solid fa-id-card"></i>
-                  </a>
-               </li>
-               <li>
-                  <a href="login.html" target="blank">Iniciar Sesion
-                     <i class="fa-solid fa-user"></i>
-                  </a>
-               </li>
-               <li>
-                  <a href="productCart.html" target="blank">
-                     <i class="fa-solid fa-cart-shopping"></i>
-                  </a>
-               </li>
-            </ul>
-         </nav>
-      </div>
-
-      <div class="interior2">
-         <nav class="navegacion2">
-            <ul>
-               <li>
-                  <a href="" target="blank">Hombres</a>
-               </li>
-               <li>
-                  <a href="" target="blank">Mujeres</a>
-               </li>
-               <li>
-                  <a href="" target="blank">Niños</a>
-               </li>
-               <li class="submenu">
-                  <a href="productDetail.html" target="blank">Productos</a>
-                  <ul class="hijos">
-                     <li><a href="">Reebok</a></li>
-                     <li><a href="">Adidas</a></li>
-                     <li><a href="">Nike</a></li>
-                  </ul>
-               </li>
-            </ul>
-         </nav>
-      </div>
+   <!--------- BARRA NAVEGADOR DESKTOP ---------->
+   <%- include('./partials/headerDesktop.ejs') %> 
    </header>
 
    <section class="calzado-zapatos">
@@ -109,7 +63,9 @@
                   <h4>Adidas Performance</h4>
                   <p> Tennis Runing Gris Multicolor</p>
                   <p> $520.900</p>
+                  <a href="productCart.html">
                   <span class="addcar"> Agregar al carrito </span><span class="addvista">Vista</span>
+                  </a>
                </div>
             </a>
          </div>
@@ -227,6 +183,10 @@
          </div>
       </section>
    </main>
+   <footer class="container-footer">
+      <%- include('./partials/footer.ejs') %> 
+   </footer>
+
 </body>
 
 </html>

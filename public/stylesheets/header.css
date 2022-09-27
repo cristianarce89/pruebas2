@@ -196,3 +196,121 @@ header{
 .navegacion2 .submenu .hijos li a{
 	display: block;
 }
+
+
+/*-------------------------------MENU DESPLEGABLE PARA CEL---------------------------------*/
+.nav-cel-tablet {
+    width: 100%;
+    position: sticky;
+    /*Con esto me permite fijar y bajar hasta donde termina el header*/
+    top: 0;
+    /*lo deja fijo hacia arriba*/
+    background-color: #ffffff;
+}
+
+.main-content {
+    padding-top: 1rem;
+}
+
+.nav-cel-tablet {
+    height: 8rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.container-logoHeader {
+    margin: 0 auto;
+}
+
+.header_logo {
+    width: 16rem;
+    height: 6rem;
+}
+
+.bar-btn {
+    width: 12rem;
+    margin-left: 4rem;
+    font-size: 2.5rem;
+    color: #111111;
+    cursor: pointer;
+}
+
+.icon-user {
+    width: 12rem;
+    display: flex;
+    justify-content: space-around;
+    font-size: 2.5rem;
+    margin-right: 2rem;
+}
+
+.icon-user i{
+    color: #000000;
+}
+
+.nav-menu {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: calc(100vh - 8rem);
+    top: 8rem;
+    background: rgba(0, 0, 0);
+    text-align: center;
+    transition: all .5s;
+}
+
+.hamburger_logo {
+    width: 16rem;
+    height: 10rem;
+    margin: 0 auto;
+}
+
+
+.hamburger_logo:hover {
+    transform: scale(1.4);
+    transition: .6s;
+}
+
+.nav-menu li {
+    line-height: 3rem;
+    margin: 3rem 0;
+    transition: all 1.5s;
+}
+
+.nav-menu li a {
+    color: #ffffff;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.nav-menu li a:hover {
+    color: var(--color-gris);
+    transition: .6s;
+}
+
+#checkbox {
+    display: none;
+}
+
+#checkbox:checked~.nav-menu {
+    display: block;
+}
+
+@media (max-width: 768px) {
+.interior{
+    display: none;
+}
+
+.interior2{
+    display: none;
+}
+}
+
+@media (min-width: 769px) { 
+
+    .nav-cel-tablet{
+        display: none;
+    }
+}

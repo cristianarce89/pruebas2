@@ -10,7 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans:wght@300&family=Roboto:wght@100;400&family=Rubik+Marker+Hatch&display=swap"
         rel="stylesheet">
-    <link href="styles/index.css" rel="stylesheet">
+    <link href="stylesheets/index.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" rel="stylesheet">
     <!-- libreria de slider movil -->
     <script src="https://kit.fontawesome.com/60737454c2.js" crossorigin="anonymous"></script>
@@ -20,93 +20,11 @@
 <body>
     <header>
         <!--------- BARRA NAVEGADOR CELULAR Y TABLET ---------->
-        <nav class="nav-cel-tablet">
-            <label for="checkbox" class="bar-btn">
-                <i class="fa-solid fa-bars"></i>
-            </label>
-            <div class="container-logoHeader">
-                <img class=header_logo src="https://i.postimg.cc/yxqy1x1f/logo.png" alt="logo_readme">
-            </div>
-            <div class="icon-user">
-                <a href="login.html">
-                    <i class="fa-solid fa-user"></i>
-                </a>
-                <a href="register.html">
-                    <i class="fa-solid fa-id-card"></i>
-                </a>
-                <a href="productCart.html">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </a>
-            </div>
-            <input type="checkbox" id="checkbox">
-            <ul class="nav-menu">
-                <li>
-                    <a href="#"></a>
-                    <img class="hamburger_logo" src="https://i.postimg.cc/nzzF4t8f/logo2-negro.jpg" alt="logo_readme">
-                </li>
-                <li><a class="active" href=#>Mujer</a></li>
-                <li><a href="#">Hombre</a></li>
-                <li><a href=#>Niños</a></li>
-                <li><a href=#>Marcas</a></li>
-                <li><a href=#>Registrarse</a></li>
-            </ul>
-        </nav>
+    <%- include('./partials/headerMobile.ejs') %> 
 
         <!--------- BARRA NAVEGADOR DESKTOP ---------->
-        <div class="interior">
-            <a href="" class="logo-header-desk1" target="blank" action="/" method="post">
-                <img src="https://i.postimg.cc/7YbJJNCj/logo-negro.jpg" alt="Logo">
-            </a>
-            <div class="container-busqueda">
-                <input class="bar-busqueda" type="text" placeholder="Buscar">
-                <i class="fa-solid fa-magnifying-glass"></i>
-
-            </div>
-            <nav class="navegacion">
-                <ul>
-                    <li>
-                        <a href="register.html" target="blank">Registrate
-                            <i class="fa-solid fa-id-card"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="login.html" target="blank">Iniciar Sesion
-                            <i class="fa-solid fa-user"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="productCart.html" target="blank">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-
-        <div class="interior2">
-            <nav class="navegacion2">
-                <ul>
-                    <li>
-                        <a href="" target="blank">Hombres</a>
-                    </li>
-                    <li>
-                        <a href="" target="blank">Mujeres</a>
-                    </li>
-                    <li>
-                        <a href="" target="blank">Niños</a>
-                    </li>
-                    <li class="submenu">
-                        <a href="productDetail.html" target="blank">Productos</a>
-                        <ul class="hijos">
-                            <li><a href="">Reebok</a></li>
-                            <li><a href="">Adidas</a></li>
-                            <li><a href="">Nike</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-
+        
+    <%- include('./partials/headerDesktop.ejs') %> 
 
         <!-----------  SECCION 1 CARDS DE HOMBRE - MUJER - NIÑOS ------------------------>
         <section class="content-section-genero">
@@ -538,42 +456,7 @@
     <!---------------- Termina slideBar-Infinito------------------------->
     </main>
     <footer class="container-footer">
-        <section class="container-locales">
-            <div class="locales-cercanos">
-                <h2>LOCALES MÁS CERCANOS</h2>
-                <h2>REGISTRATE PARA RECIBIR NOVEDADES</h2>
-            </div>
-            <span class="linea-separadora">--------------------------------------------------------------</span>
-            <div>
-                <h1>Acerca de Reeadni</h1>
-                <div class="acerca-reeadni">
-                    <p>Noticias</p>
-                    <p>Empleos</p>
-                    <p>Inversiones</p>
-                    <p>Sustentabilidad</p>
-                </div>
-            </div>
-            <div class="container-icons">
-                <i class="fa-brands fa-square-twitter"></i>
-                <i class="fa-brands fa-square-facebook"></i>
-                <i class="fa-brands fa-square-youtube"></i>
-                <i class="fa-brands fa-square-instagram"></i>
-            </div>
-        </section>
-
-        <section class="container-ubicacion-derechos">
-            <div class="ubicacion">
-                <i class="fa-solid fa-location-dot"></i>
-                <span>Colombia</span>
-            </div>
-            <div class="derechos-reservados">
-                <p>®2022 Reeadni, Todos los derechos reservados</p>
-            </div>
-            <div class="terminos-politicas">
-                <p>Terminos de uso</p>
-                <p>Política de privacidad</p>
-            </div>
-        </section>
+        <%- include('./partials/footer.ejs') %> 
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="/slider.js"></script>

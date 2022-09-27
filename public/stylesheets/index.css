@@ -88,8 +88,6 @@ img {
     color: #000000;
 }
 
-
-
 .nav-menu {
     position: fixed;
     display: none;
@@ -527,7 +525,7 @@ img {
 
 .carrousel {
     width: 90%;
-    position: relative;
+    position:relative;
     margin: 0 auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
     max-width: 35rem;
@@ -780,8 +778,6 @@ p {
     .acerca-reeadni{
         display: none;
     }
-
-
 }
 
 @media (min-width: 481px) {
