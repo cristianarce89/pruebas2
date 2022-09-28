@@ -1,4 +1,4 @@
-Retrospectiva del sprint anterior.
+Retrospectiva del sprint uno.
 
 En el sprint uno se trabajo el boceto del proyecto, para el caso de nosotros Reeadni, por medio de la pagina web Wireframe.
 Anteriormente se consulto en equipo el tema a tratar de nuestro proyecto, nos pusimos de acuerdo con la metodologia de trabajo, y nos asignamos segun la pagina, las tareas a realizar.
@@ -29,4 +29,52 @@ poca investigacion
 
 analisis de trabajo en equipo
 En el primer sprint hubo buena comunicacion, el trabajo se entrego a tiempo, nos falto hacer una mayor inspeccion en cuanto a estilos de la pagina.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Retrospectiva del sprint dos.
+
+En el sprint dos se trabajo con un tablero de trabajo el cual usamos el trello.
+Se creo la estructura de archivos utilizando node.js + Express.
+Se implemento el modelo MVC para el proyector reeadni en node.js
+Se creo pagina de inicio la cual llamamos index.html, pensando en el usuario como podria ver el resumen de la oferta de productos, para poder decidir
+rapidamente quedarse o buscar el producto en nuestra pagina reeadni.
+tambien tuvimos en cuenta que el sitio funcione bien en el celular y modo tablet para que se pudiera acceder en cualquier momento.
+Al final se entrego el archivo index con sus hojas de estilos, las imagenes fueron suvidas a un servidor en internet y se uzaron con links, esto para
+no tener las imagenes dentro del proyecto y no quedara tan pesado y se pudiera visualizar mas facil desde culquier ordenador o dispositivo movil.
+
+Se creo tambien la estructura del detalle del producto en html y con sus respectivos estilos, el archivo lo llamamos productDetail.html.
+pensando en el cliente se logro mostrar toda la informacion relevante del producto para que decida rapidamente comprarlo.
+Tambien se penso en una manera facil de que puede agregar el producto al carrito de compras para que finalice su adquisicion.
+
+Se tuvo en cuenta la creacion de la estructura del carrito de compras con sus respectivos estilos, el archivo lo llamamos productCart.html.
+pensando en el cliente se logro realizar que este pudiera acceder al detalle del carrito de compras en cualquier momento para finalizar la compra.
+tambien se penso como podria modificar productos del carrito de compra para que puede eliminar o modificar la cantidad.
+
+Para completar este sprint realizamos un espacio para los registros de los usuarios y apartado de login para nuestros clientes.
+pensando en el cliente vimos la necesidad de hacer un espacion para que se puedan registrar nuestros futuros clientes para almacenar la informacion en una
+base de datos y asi poder acceder al perfil e historial de compras que realicen en nuestra pagina web, y de esta manera facilitar el proceso de futuras
+compras.
+Para nuestros clientes actuales pensamos en ellos con nuestro apartado de login para que se puedan loguear en cualquier momento y que puedan acceder a su
+historial de compras.
+tambien se agrega la funcionalidad de que el sitio almacene a traves del navegador web y usuario y contraseña.
+Pensando en lo mejor para dar calidad agregamos un espacio para que puedan recuperar la contraseña en caso de olvido.
+
+comenzar hacer
+
+
+hacer mas
+
+
+continuar haciendo
+
+
+hacer menos
+
+
+dejar de hacer
+
+
+analisis de trabajo en equipo
+
 
