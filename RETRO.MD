@@ -40,7 +40,7 @@ Se implemento el modelo MVC para el proyector reeadni en node.js
 Se creo pagina de inicio la cual llamamos index.html, pensando en el usuario como podria ver el resumen de la oferta de productos, para poder decidir
 rapidamente quedarse o buscar el producto en nuestra pagina reeadni.
 tambien tuvimos en cuenta que el sitio funcione bien en el celular y modo tablet para que se pudiera acceder en cualquier momento.
-Al final se entrego el archivo index con sus hojas de estilos, las imagenes fueron suvidas a un servidor en internet y se uzaron con links, esto para
+Al final se entrego el archivo index con sus hojas de estilos, las imagenes fueron suvidas a un servidor en internet y se ugit push origin devzaron con links, esto para
 no tener las imagenes dentro del proyecto y no quedara tan pesado y se pudiera visualizar mas facil desde culquier ordenador o dispositivo movil.
 
 Se creo tambien la estructura del detalle del producto en html y con sus respectivos estilos, el archivo lo llamamos productDetail.html.
