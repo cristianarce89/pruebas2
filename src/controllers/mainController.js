@@ -1,4 +1,5 @@
 const mainController = {
+    
     index: (req, res) => {
         res.render('index')
     },
@@ -14,6 +15,12 @@ const mainController = {
     productDetail: (req, res) => {
         res.render('productDetail')
     },
+    productCreate: (req,res) => {
+        res.render('productCreate')
+    },
+    productEdit: (req,res) => {
+        res.render('productEdit')
+    }
 }
 
 module.exports = mainController;
