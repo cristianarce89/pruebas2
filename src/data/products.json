@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "name": "Skate Adn 2000",
+        "description": "Contágiate de nostalgia. Basándose en las siluetas de skate de principios de los 2000, los ADI2000 lucen colores vivos inspirados en las consolas de videojuegos de la época, mientras que la gamuza, la malla y el cuero rinden homenaje a sus predecesores. Incluso tu consola de videojuegos favorita merece una actualización de vez en cuando, ¿verdad?",
+        "discount": 5,
+        "image": "https://i.postimg.cc/GpYPcVMb/j1.jpg",
+        "category": "hombre"
+    },
+    {
+        "id": 2,
+        "name": "Pegasus 39",
+        "description": "Año tras año, la Pegasus ha demostrado su valía ante corredores de todo el mundo. Ahora nuestro estilo más confiable regresa con innovaciones que destacan su identidad más que nunca. Conocé la Nike Air Zoom Pegasus 39, confiable, cómoda y siempre lista para correr.",
+        "price": 320000,
+        "discount": 5,
+        "image": "https://i.postimg.cc/xC2vq57M/j2.jpg",
+        "category": "mujer"
+    },
+    {
+        "id": 3,
+        "name": "Jordan Air 3",
+        "description": "a Air Jordan High debutó en 1985 como la primera zapatilla exclusiva desarrollada por Nike para Michael Jordan. La zapatilla de baloncesto de rendimiento diseñada por Peter Moore presentaba un diseño simple inspirado en Nike Dunk que incorporaba el Nike Swoosh y el logotipo de Jordan Wings y presentaba Nike Air.",
+        "price": 120000,
+        "discount": 15,
+        "image": "https://i.postimg.cc/rFnNgS02/j4.jpg",
+        "category": "nino"
+    }
+]

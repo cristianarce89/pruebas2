@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "nombres": "Cristian Camilo",
+        "apellidos": "Arce Mejia",
+        "correo": "cristiancamilo_1989@hotmail.com",
+        "contraseña": 1234,
+        "telefono": 3137224933,
+        "cedula": 1054550448,
+        "fecha-nacimiento": "11-10-1989",
+        "genero": "hombre"
+    },
+    {
+        "id": 2,
+        "nombres": "Fabio",
+        "apellidos": "Cruz Lozano",
+        "correo": "fabiocruzlozano@gmail.com",
+        "contraseña": 1234,
+        "telefono": 3135859600,
+        "cedula": 1054547159,
+        "fecha-nacimiento": "23-07-1988", 
+        "genero": "hombre" 
+    }
+]
