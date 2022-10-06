@@ -61,20 +61,21 @@ tambien se agrega la funcionalidad de que el sitio almacene a traves del navegad
 Pensando en lo mejor para dar calidad agregamos un espacio para que puedan recuperar la contraseña en caso de olvido.
 
 comenzar hacer
-
+devemos comenzar hacer es cumplir con los terminos y acuerdos, mas junta dinamica 
 
 hacer mas
-
+trabajar mas en el grupo como equipo, tener mas empatia con cada uno y mirar cuales son las fallas y como mejorarlas. consultar las dudas, investigar mas , reunirnos mas via virtual.
 
 continuar haciendo
-
+continuamos con los sprint y mejorar cada proyecto 
 
 hacer menos
-
+menos dudas para hacer  preguntas 
 
 dejar de hacer
-
+ dejar el miedo de preguntarnos las dudas
 
 analisis de trabajo en equipo
-
+en este sprint 3, hubo un excelente trabajo de los compañeros 
+la idea es seguir mejorando en todo el proyecto y como grupo, cada dia vamos aprendiendo cosas nuevas, dificiles pero todos con toda la actitud de avnzae y prosperar.
 
