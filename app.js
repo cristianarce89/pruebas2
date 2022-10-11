@@ -3,6 +3,9 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const usuarioRoutes = require('./src/routes/usuarioRoutes.js');
+const db = require('./config/db.js');
+const csrf = require('csurf');
 
 var indexRouter = require('./src/routes/index.js');
 // var usersRouter = require('./src/routes/users.js');
@@ -12,7 +15,19 @@ const app = express();
 // view engine setup
 app.set('views', path.join(__dirname, '/src/views'));
 app.set('view engine', 'ejs');
-
+//Ruta del registro
+app.use('/', usuarioRoutes);
+//Habilitar lectura de datos del formulario
+app.use( express.urlencoded({ extended:true }));
+//conexion a la base de datos
+try {
+  db.authenticate();
+  db.sync();
+  console.log('Conexion correcta a la base de datos');
+} catch (error){
+  console.log(error);
+}
+//---------------
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

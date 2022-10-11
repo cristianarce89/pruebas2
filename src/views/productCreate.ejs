@@ -5,13 +5,15 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link
-		href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans:wght@300&family=Roboto:wght@100;400&family=Rubik+Marker+Hatch&display=swap"
-		rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans:wght@300&family=Roboto:wght@100;400&family=Rubik+Marker+Hatch&display=swap"
+        rel="stylesheet">
 	<link rel="stylesheet" href="/stylesheets/header.css">
-	<link rel="stylesheet" href="/stylesheets/productCreate.css">
-	<link rel="stylesheet" href="/stylesheets/footer.css">
-	<script src="https://kit.fontawesome.com/8945ba6e2e.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href=/stylesheets/productCreate.css>
+	<link rel="stylesheet" href=/stylesheets/footer.css>
+	<script src="https://kit.fontawesome.com/60737454c2.js" crossorigin="anonymous"></script>	
 	<title>Readni Creacion de producto</title>
 </head>
 
@@ -19,7 +21,7 @@
 	<div class="container productCreate">
 		<form action="/products" method="POST" enctype="multipart/form-data" class="formulario">
 			<div class="container titulo">
-				<h2 class="products-title">Formulario de creación de productos</h2>
+				<h2 class="products-title">Formulario<br> Creación de productos</h2>
 			</div>
 			<div class="row nameProduct">	
 				<input type="text" id="nombre" name="nombre" class="formulario__input">			
@@ -63,9 +65,14 @@
 				<label for="description" class="">Descripción:</label>
 				<textarea name="description" id="description" class="formulario__textArea"></textarea>
 			</div>
-			<div class="button image">
-				<label for="image" class="form-label">Imagen</label>
-				<input type="file" id="image" name="image" class="">
+			<div class="add-new-photo first" id="add-photo">
+				<input type="file" id="add_imagen" name="add_imagen" class="add_imagen" multiple>
+				<button type="button" id="boton_add" class="boton_add">
+					<div>
+						<i class="fa-solid fa-image"></i>
+					</div>					
+					Agrega una imagen
+				</button>
 			</div>
 			<div class="button saveProduct">
 				<button type="submit" class="formulario__submit">Guardar producto</button>

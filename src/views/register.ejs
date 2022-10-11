@@ -1,87 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario Register</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans:wght@300&family=Roboto:wght@100;400&family=Rubik+Marker+Hatch&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheets/header.css">
-    <link rel="stylesheet" href="/stylesheets/register.css">
-    <link rel="stylesheet" href="/stylesheets/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans:wght@300&family=Roboto:wght@100;400&family=Rubik+Marker+Hatch&display=swap" rel="stylesheet">
+    <link href="/stylesheets/header.css" rel="stylesheet">
+    <link href="/stylesheets/loginregister.css" rel="stylesheet">
+    <link href="/stylesheets/footer.css" rel="stylesheet">
+    <link href="styles/normalize.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8945ba6e2e.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <header>
-    <!--------- BARRA NAVEGADOR CELULAR Y TABLET ---------->
-    <%- include('./partials/headerMobile.ejs') %> 
+<body> 
+    <main class="login-register-container">
+        <section class="registro">
+            <div class="form-container">
+                <a href="/"><i class="fa-solid fa-circle-left fa-2x"></i></a>
+                <h1>registro</h1>
+                <form action="/register" method="POST">
+                    <div class="control">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" name="nombre" id="nombre" value=usuario ? usario.nombre: ''>
+                    </div>
+                    <div class="control">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" name="email" id="email" value=usuario ? usario.email: ''>
+                    </div>
+                    <div class="control">
+                        <label for="password">Contraseña</label>
+                        <input type="password" name="password" id="password">
+                    </div>
+                    <div class="control">
+                        <label for="repetir_password">Repite La contraseña</label>
+                        <input type="password" name="repetir_password" id="repetir_password">
+                    </div>
+                    <div class="control">
+                        <label for="cellphone">Numero telefonico</label>
+                        <input type="tel" name="cellphone" id="cellphone">
+                    </div>
+                    <div class="control">
+                        <label for="direccion">Direccion de la vivienda</label>
+                        <input type="text" name="direccion" id="direccion">
+                    </div>
 
-    <!--------- BARRA NAVEGADOR DESKTOP ---------->
-    <%- include('./partials/headerDesktop.ejs') %> 
-    </header>
-
-
-    <main class="main">
-        <a href="/">
-            <img class="logo" src="https://i.postimg.cc/yxqy1x1f/logo.png" alt="logo-reeadni">
-        </a>
-        <form class="container" action="/" method="POST">
-            <h1 class="title">Suscríbete</h1>
-            <input class="campo" type="text" placeholder="Nombres">
-            <input class="campo" type="text" placeholder="Apellidos">
-            <input class="campo" type="email" placeholder="Correo Electrónico">
-            <input class="campo" type="password" placeholder="Contraseña">
-            <input class="campo" type="password" placeholder="Confirmar Contraseña">
-            <input class="campo" type="number" placeholder="Télefono Celular">
-            <select class="campo" name="" id="">
-                <option value="none" disabled selected>Elija su tipo de documento </option>
-                <option value="tarjeta">Tarjeta de identidad</option>
-                <option value="cedula">Cédula de ciudadania</option>
-                <option value="extranjera">Cédula extrenjera</option>
-            </select>
-            <input class="campo" type="number" placeholder="Número de Documento">
-            <div class="container_date">
-                <label class="date" for="fecha">Fecha de nacimiento</label>
-                <input class="date" type="date" id="fecha" name="fDnacimiento" required>
-            </div>
-            <select class="campo" name="" id="">
-                <option value="" disabled selected>Elija su género</option>
-                <option value="mujer">Mujer</option>
-                <option value="hombre">Hombre</option>
-                <option value="otro">Otro</option>
-                <option value="no">No quiero decirlo</option>
-            </select>
-
-            <div class="campo_terminos">
-                <input type="checkbox" name="tipousuario" required>
-                <span class="important">Acepto los términos y condiciones</span> <span> y las</span><span
-                    class="important"> políticas de privacidad del sitio</span>
-            </div>
-            <div class="campo_terminos">
-                <input type="checkbox" name="tipousuario" required>
-                <span> Acepto resibir informacion sobre novedades, ofertas,descuentos, promociones,
-                    eventos y mucho más</span>
-            </div>
-            <div class="container-image">
-                <label for="group-image">Imagen del grupo</label>
-                <div class="container-boton">
-                    <input type="file" name="group-image" id="group-image">
+                    <span class="termino-condiciones"><input type="checkbox">Aceptas los terminos y condiciones de nuestro servicio</span>
+                    <div class="control">
+                        <input type="submit" value="Terminar el Registro">
+                    </div>
+                </form>
+                <div class="link-forgot-password">
+                    <a href="/login">Ya tienes una cuenta?</a>
                 </div>
             </div>
-            <button class="button" type="submit">Enviar</button>
-
-        </form>
+        </section>
     </main>
 
-    <footer class="container-footer">
-        <%- include('./partials/footer.ejs') %> 
-    </footer>
-</body>
 
+</body>
 </html>

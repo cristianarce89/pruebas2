@@ -44,6 +44,8 @@ html {
     margin-top: 0;
     margin-bottom: 2rem;
     color: rgba(0,0,0,0.7);
+    font-size: 1.8rem;
+    font-family: var(--texto-tituloComentarios);
 }
 
 .formulario__input, .formulario__label, .formulario__submit{
@@ -95,10 +97,11 @@ html {
 }
 
 .type_radio{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     display: flex;   
     justify-content:space-around; 
-    margin: 0 5rem
+    margin: 0 5rem;
+    margin-bottom: 2rem;
 }
 
 .formulario__textArea{
@@ -113,4 +116,31 @@ html {
 
 .fijar{
     margin-top: -12rem;
+}
+
+.description, .category{
+    font-size: 1.4rem;
+}
+
+#add_imagen{
+    display:none
+}
+
+.boton_add{
+    display: block;
+    margin: 0 auto;
+    width: 30rem;
+    height: 30rem;
+    margin-bottom: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-image{
+    font-size: 8rem;
+}
+
+img {
+    width: 30rem;
+    height: 30rem;
 }
