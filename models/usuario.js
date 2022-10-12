@@ -17,7 +17,7 @@ const usuario = db.define('usuarios', {
         allowNull: false
     },
     cellphone: {
-        type: DataTypes.NUMBER,
+        type: DataTypes.STRING,
         allowNull: false
     },
     direccion: {
