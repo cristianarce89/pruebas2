@@ -1,6 +1,5 @@
-const { DataTypes } = require('sequelize');
-const db = require('../config/db.js');
-const bcrypt = require('bcrypt');
+import { DataTypes } from "sequelize";
+import db from '../config/db.js'
 
 //Creacion de plantilla de usuarios y cada atributo sera una columna
 
@@ -18,7 +17,7 @@ const usuario = db.define('usuarios', {
         allowNull: false
     },
     cellphone: {
-        type: DataTypes.STRING,
+        type: DataTypes.NUMBER,
         allowNull: false
     },
     direccion: {
@@ -27,13 +26,6 @@ const usuario = db.define('usuarios', {
     },
     token: DataTypes.STRING,
     confirmado: DataTypes.BOOLEAN
-}, {
-    hooks:{
-        beforeCreate: async function(Usuario){
-            const salt = await bcrypt.genSalt(10);
-            Usuario.password = await bcrypt.hash(Usuario.password, salt);
-        }
-    }
 });
 
-module.exports = usuario;
+export default usuario;
