@@ -79,3 +79,34 @@ analisis de trabajo en equipo
 en este sprint 3, hubo un excelente trabajo de los compañeros 
 la idea es seguir mejorando en todo el proyecto y como grupo, cada dia vamos aprendiendo cosas nuevas, dificiles pero todos con toda la actitud de avnzae y prosperar.
 
+---------------------------------------------------------------------------------------------------------------------------------
+Retrospectiva del sprint tres.
+
+el objetivo de esta reunión o encuentros,  no es otro que mejorar para la próximas reuniones y actividades. queremos  mejorar día a día,ya que para algunos compañeros se dificulta entender  algunos programas, codigos.
+en este sprint hubo mas dificultad, desapego,miedos,temor de hacer mal las cosas. pero con ganas de apredner cada dia .
+
+comenzar hacer
+Realizar una programacion de encuentro virtuales, para evaluar la evolucion del trabajo y de hablar de los tremores, dudas, que no entendemos y como mejorarlo.
+Ser cumplidos en las activades propuestas por el equipo.
+Tener mas dialogo como equipo.
+Practicar los temas vistos en clases.
+
+hacer mas
+encuentros, mostrar interes en le grupo del chat o del trello,
+Estar mas unidos como compañeros,  brindar mas ayuda para los que estan con dificultad sobre los temas 
+Ser mas responsables con las actividades.
+implementar mas el trabajo en github
+Investigar mas afondo 
+Estar de acuerdo en temas especificos
+
+continuar haciendo
+Dividirnos el proyecto e ir avanzando con las tareas programadas individualmente, tener en cuenta que si no entendemos, tenemos todo el espacio y la confianza para reportarlo, discutirlo, hablarlo.
+
+hacer menos
+decirnos lo bueno y lo malo para ser mejor equipo 
+
+dejar de hacer
+el silencio, hay que hablar mas, preguntar mas.
+
+analisis de trabajo en equipo
+somos un equipo bueno, con ganas de aprender y ayudar al otro, hay que avanzar juntos para llegar tos y disfrutar del exito.
