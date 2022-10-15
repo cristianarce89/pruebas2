@@ -1,56 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Readni Creacion de producto</title>
-</head>
-<body>
-    <div class="container products-wrapper">
-		<div class="row">
-			<div class="col-12">
-				<h2 class="products-title">Formulario de creación de productos</h2>
-			</div>
-		</div>
-		<div class="col-12">
-			<form action="/products" method="POST" enctype="multipart/form-data">
-				<div class="row product-detail">
-					<div class="col-12 col-md-6">
-						<label for="name" class="form-label">Nombre del producto:</label>
-						<input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input">
-					</div>
-					<div class="col-12 col-md-6">
-						<label for="price" class="form-label">Precio del producto:</label>
-						<input type="text" id="price" name="price" placeholder="Ej: 5678" class="form-input">
-					</div>
-					<div class="col-12 col-md-6">
-						<label for="discount" class="form-label">Descuento:</label>
-						<input type="text" id="discount" name="discount" placeholder="Ej: 15" class="form-input">
-					</div>
-					<div class="col-12 col-md-6">
-						<label for="category" class="form-label">Categoría:</label>
-						<select name="category" id="category" class="form-input">
-							<option value="">Elegí</option>
-							<option value="in-sale">En oferta</option>
-							<option value="visited">Últimos agregados</option>
-						</select>
-					</div>
-					<div class="col-12">
-						<label for="description" class="form-label">Descipción:</label>
-						<textarea name="description" id="description" class="form-input"></textarea>
-					</div>
-					<div class="col-12 col-md-6">
-						<label for="image" class="form-label">Imagen</label>
-						<input type="file" id="image" name="image" class="form-input">
-					</div>
-					<div class="col-12">
-						<button type="submit" class="buy-now-button">Guardar producto</button>
-					</div>
-				</div>
-			</form>
-		</div>
 
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans:wght@300&family=Roboto:wght@100;400&family=Rubik+Marker+Hatch&display=swap"
+        rel="stylesheet">
+	<link rel="stylesheet" href="/stylesheets/header.css">
+	<link rel="stylesheet" href=/stylesheets/productCreate.css>
+	<link rel="stylesheet" href=/stylesheets/footer.css>
+	<script src="https://kit.fontawesome.com/60737454c2.js" crossorigin="anonymous"></script>	
+	<title>Readni Creacion de producto</title>
+</head>
+
+<body>
+	<div class="container productCreate">
+		<form action="/products" method="POST" enctype="multipart/form-data" class="formulario">
+			<div class="container titulo">
+				<h2 class="products-title">Formulario<br> Creación de productos</h2>
+			</div>
+			<div class="row nameProduct">	
+				<input type="text" id="nombre" name="nombre" class="formulario__input">			
+				<label for="nombre" class="formulario__label">Nombre del producto</label>
+				
+			</div>
+			<div class="row priceProduct">
+				<input type="text" id="price" name="price" class="formulario__input">
+				<label for="price" class="formulario__label">Precio del producto</label>
+				
+			</div>
+			<div class="row discount">
+				<input type="text" id="discount" name="discount" class="formulario__input">
+				<label for="discount" class="formulario__label">Descuento:</label>
+				
+			</div>
+			<div class="row category">
+				<label for="category">Categoría:</label>
+				<select name="category" id="category" class="formulario__select">
+					<option value="">Hombres</option>
+					<option value="in-sale">Mujeres</option>
+					<option value="visited">Niños</option>
+				</select>
+			</div>
+			<div class="type_radio">
+				<label for="typeTenis_reebok">
+					<input type="radio" name="typeTenis" />
+					Reebok
+				</label>
+				<label for="typeTenis_adidas">
+					<input type="radio" name="typeTenis" />
+					Adidas
+				</label>
+				<label for="typeTenis_nike">
+					<input type="radio" name="typeTenis" />
+					Nike
+				</label>
+				
+			</div>
+			<div class="row description">
+				<label for="description" class="">Descripción:</label>
+				<textarea name="description" id="description" class="formulario__textArea"></textarea>
+			</div>
+			<div class="add-new-photo first" id="add-photo">
+				<input type="file" id="add_imagen" name="add_imagen" class="add_imagen" multiple>
+				<button type="button" id="boton_add" class="boton_add">
+					<div>
+						<i class="fa-solid fa-image"></i>
+					</div>					
+					Agrega una imagen
+				</button>
+			</div>
+			<div class="button saveProduct">
+				<button type="submit" class="formulario__submit">Guardar producto</button>
+			</div>
+		</form>
 	</div>
+	<script src="/javascripts/productCreate.js"></script>
 </body>
+
 </html>
