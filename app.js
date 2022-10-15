@@ -1,6 +1,6 @@
 import express from 'express';
 import path from 'path';
-import mainRouter from './src/routes/mainRouter.js';
+import usuarioRoutes from './src/routes/usuarioRouter.js';
 import cookieParser from 'cookie-parser';
 import db from './config/db.js';
 import {fileURLToPath} from 'url';
@@ -36,8 +36,8 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src/views'));
 
-app.use('/views', mainRouter)
-app.use('/', mainRouter)
+app.use('/views', usuarioRoutes)
+app.use('/', usuarioRoutes)
 
 
 const port = process.env.PORT || 3000;

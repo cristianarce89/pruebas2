@@ -21,7 +21,7 @@ const emailRegistro = async (datos) => {
         text: 'confirma tu cuenta en Readni.com',
         html: ` <p>hola ${nombre}, confirma tu cuenta en Readni.com !!</p>
                 <p>Tu cuenta ya esta lista, solo debes confirmarla en el siguiente enlace: 
-                <a href="${process.env.BACKEND_URL}:${process.env.PORT ?? 3000}/auth/confirmar/${token} ">Confirmar cuenta</a></p>
+                <a href="${process.env.BACKEND_URL}:${process.env.PORT ?? 3000}/confirmar/${token} ">Confirmar cuenta</a></p>
                 <p>Si tu no creaste la cuenta, puedes ignorar el mensaje</p>
                 `
       })
@@ -48,7 +48,7 @@ const emailRecuperarPassword = async (datos) => {
       text: 'Reestablece el acceso en Readni.com',
       html: ` <p>hola ${nombre}, has solicitado reestablecer tu password en Readni.com !!</p>
               <p>Sigue el siguiente enlace para poder cambiar tu password: 
-              <a href="${process.env.BACKEND_URL}:${process.env.PORT ?? 3000}/auth/recuperar-password/${token} ">Restablecer Contraseña</a></p>
+              <a href="${process.env.BACKEND_URL}:${process.env.PORT ?? 3000}/reset-password/${token} ">Restablecer Contraseña</a></p>
               <p>Si tu no solicitaste el cambio de contraseña, puedes ignorar el mensaje</p>
               `
     })
