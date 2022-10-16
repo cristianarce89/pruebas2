@@ -408,7 +408,7 @@ img {
     /* Esto hace animacion a la sombra que le ponemos */
 }
 
-.container-genero img:hover {
+.container-genero:hover {
     box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 1);
 }
 
@@ -861,7 +861,8 @@ p {
     height: 40rem;
     }
 
-.container-genero a:hover{
+.container-genero:hover a {
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 1);
     background-color: #037bc0;
     color: #fff;
     border-bottom-right-radius: 1rem;

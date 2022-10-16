@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="stylesheets/adminPanel.css" rel="stylesheet">
+    <%- include('./partials/head.ejs') %>
+        <title>Panel de Administrador</title>
+</head>
+
+<body>
+    <header class="container-header">    
+        <div class="container-logo">
+            <a href="/" target="blank"><img src="https://i.postimg.cc/7YbJJNCj/logo-negro.jpg" class="logo" alt="Logo"></a>
+        </div>
+            <nav class="navegacion">
+                <ul>
+                    <li>
+                        <a href="/" target="blank">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#" target="blank">Perfil</a>
+                    </li>
+                    <li>
+                        <a href="#" target="blank">Cerrar sesion</a>
+                    </li>
+                </ul>
+            </nav>
+    </header>
+    <main>
+        <div class="titulo">
+            <img class="logo2" src="https://i.postimg.cc/nzzF4t8f/logo2-negro.jpg" alt="logo2">
+            <h1>Reeadni</h1>
+        </div>
+        <div class="containerBoton">
+            <a href="#">
+                <button type="button" class="crear boton">Crear Producto</button>
+            </a>
+
+            <a href="#">
+                <button type="button" class="editar boton">Editar Producto</button>
+            </a>
+            
+            <a href="#">
+                <button type="button" class="borrar boton">Borrar Producto</button>
+            </a>            
+        </div>
+    </main>
+</body>
+
+</html>
