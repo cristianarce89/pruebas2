@@ -4,7 +4,7 @@ import bcrypt from 'bcrypt'
 import { generarJWT, generarId } from '../../helpers/tokens.js'
 import { emailRegistro, emailRecuperarPassword } from '../../helpers/emails.js'
 
-const formularioLogin = (req, res) => {res.render('login')};
+const formularioLogin = (req, res) => {res.render('users/login')};
 
 const autenticar = async (req, res) => {
     // Validacion
@@ -15,7 +15,7 @@ const autenticar = async (req, res) => {
 
     //Verificar que el resultado no este vacio
     if(!resultado.isEmpty()){
-        return res.render('login');
+        return res.render('users/login');
     };
 
     // Comprobar si el usuario existe
@@ -24,12 +24,12 @@ const autenticar = async (req, res) => {
 
     const Usuario = await usuario.findOne({where : {email}});
     if(!Usuario){
-        return res.render('login');
+        return res.render('users/login');
     };
 
     // Comprobar si el usuario esta confirmado
     if(!Usuario.confirmado){
-        return res.render('login');
+        return res.render('users/login');
     };
     // Revisar el password
 
@@ -51,7 +51,7 @@ const autenticar = async (req, res) => {
     
 };
 
-const formularioRegistro = (req, res) => {res.render('register')}
+const formularioRegistro = (req, res) => {res.render('users/register')}
 
 const registrar = async (req, res) => {
     // Validacion
@@ -65,7 +65,7 @@ const registrar = async (req, res) => {
 
     //Verificar que el resultado este vacio
     if(!resultado.isEmpty()){
-        return res.render('registro', {
+        return res.render('users/registro', {
                 usuario: {
                     nombre: req.body.nombre,
                     email: req.body.email
@@ -78,7 +78,7 @@ const registrar = async (req, res) => {
     // Verificar que el usuario no este duplicado
     const existeUsuario = await usuario.findOne( { where : { email } })
     if(existeUsuario) {
-        return res.render('register', {
+        return res.render('users/register', {
             usuario: {
                 nombre: req.body.nombre,
                 email: req.body.email,
@@ -106,7 +106,7 @@ const registrar = async (req, res) => {
     })
 
     // Mostrar mensaje de confirmacion !
-    res.render('cuentaCreada')
+    res.render('users/cuentaCreada')
 }
 
 const confirmar = async (req,res) => {
@@ -116,7 +116,7 @@ const confirmar = async (req,res) => {
     const Usuario = await usuario.findOne({ where: {token}})
 
     if(!Usuario){
-        return res.render('errorConfirmarCuenta')
+        return res.render('users/errorConfirmarCuenta')
     }
 
     // Confirmar la cuenta
@@ -124,11 +124,11 @@ const confirmar = async (req,res) => {
     Usuario.confirmado = true;
     await Usuario.save();
 
-    res.render('confirmacionCorreo');
+    res.render('users/confirmacionCorreo');
 
 }
 
-const formularioRecuperarPassword = (req, res) => {res.render('recuperar-password')}
+const formularioRecuperarPassword = (req, res) => {res.render('users/recuperar-password')}
 
 const resetPassword = async (req, res) => {
     // Validacion
@@ -140,8 +140,7 @@ const resetPassword = async (req, res) => {
     //Verificar que el resultado este vacio
     if(!resultado.isEmpty()){
         // Errores
-        return res.render('recuperar-password', {
-        })
+        return res.render('users/recuperar-password')
     }
 
     // Buscar el usuario
@@ -149,7 +148,7 @@ const resetPassword = async (req, res) => {
 
     const Usuario = await usuario.findOne({where: {email}});
     if(!Usuario){
-        return res.render('recuperar-password', {
+        return res.render('users/recuperar-password', {
         })
     }
 
@@ -165,7 +164,7 @@ const resetPassword = async (req, res) => {
     })
 
     // Renderizar un mensaje
-    res.render('recuperarAcceso')
+    res.render('users/recuperarAcceso')
 }
 
 const comprobarToken = async (req,res) => {
@@ -173,11 +172,11 @@ const comprobarToken = async (req,res) => {
 
     const Usuario = await usuario.findOne({where: {token}})
     if(!Usuario){
-        return res.render('confirmarCuenta')
+        return res.render('users/confirmarCuenta')
     }
 
     // Mostrar un formulario para modificar el password
-    res.render('reset-password')
+    res.render('users/reset-password')
 }
 
 const nuevoPassword = async (req,res) => {
@@ -188,7 +187,7 @@ const nuevoPassword = async (req,res) => {
 
     //Verificar que el resultado este vacio
     if(!resultado.isEmpty()){
-        return res.render('reset-password')
+        return res.render('users/reset-password')
     }
 
     const { token } = req.params
@@ -203,7 +202,7 @@ const nuevoPassword = async (req,res) => {
 
     await Usuario.save();
 
-    res.render('confirmarCuenta')
+    res.render('users/confirmarCuenta')
 
 }
 

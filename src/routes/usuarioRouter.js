@@ -23,6 +23,19 @@ router.post('/recuperar-password', resetPassword);
 router.get('/recuperar-password/:token', comprobarToken);
 router.post('/recuperar-password/:token', nuevoPassword);
 
+router.get('/productCreate', (req, res) => {
+    res.render('productos/productCreate');
+});
 
+router.get('/productDetail', (req, res) => {
+    res.render('productos/productDetail');
+})
 
+router.get('/adminPanel', (req, res) => {
+    res.render('admin/adminPanel');
+})
+
+router.get('/productList', (req, res) => {
+    res.render('productos/productList');
+})
 export default router;

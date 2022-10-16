@@ -10,8 +10,9 @@
    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans:wght@300&family=Roboto:wght@100;400&family=Rubik+Marker+Hatch&display=swap" rel="stylesheet">
    <link href="/stylesheets/header.css" rel="stylesheet">
    
+   <link href="/stylesheets/productList.css" rel="stylesheet">
    <link href="/stylesheets/footer.css" rel="stylesheet">
-   <link href="styles/normalize.css" rel="stylesheet">
+   <link href="/styles/normalize.css" rel="stylesheet">
    <script src="https://kit.fontawesome.com/8945ba6e2e.js" crossorigin="anonymous"></script>
    <title>Document</title>
 </head>
@@ -19,10 +20,10 @@
 <body>
    <header>
    <!--------- BARRA NAVEGADOR CELULAR Y TABLET ---------->
-   <%- include('./partials/headerMobile.ejs') %> 
+   <%- include('../partials/headerMobile.ejs') %> 
 
    <!--------- BARRA NAVEGADOR DESKTOP ---------->
-   <%- include('./partials/headerDesktop.ejs') %> 
+   <%- include('../partials/headerDesktop.ejs') %> 
    </header>
 
    <section class="calzado-zapatos">
@@ -184,7 +185,7 @@
       </section>
    </main>
    <footer class="container-footer">
-      <%- include('./partials/footer.ejs') %> 
+      <%- include('../partials/footer.ejs') %> 
    </footer>
 
 </body>
