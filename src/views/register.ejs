@@ -20,11 +20,11 @@
                 <form action="/views/register" method="POST">
                     <div class="control">
                         <label for="nombre">Nombre completo</label>
-                        <input type="text" name="nombre" id="nombre" value=usuario ? usario.nombre: ''>
+                        <input type="text" name="nombre" id="nombre">
                     </div>
                     <div class="control">
                         <label for="email">Correo electrónico</label>
-                        <input type="email" name="email" id="email" value=usuario ? usario.email: ''>
+                        <input type="email" name="email" id="email">
                     </div>
                     <div class="control">
                         <label for="password">Contraseña</label>
@@ -42,14 +42,20 @@
                         <label for="direccion">Direccion de la vivienda</label>
                         <input type="text" name="direccion" id="direccion">
                     </div>
-
-                    <span class="termino-condiciones"><input type="checkbox">Aceptas los terminos y condiciones de nuestro servicio</span>
+                    <div class="TerminosYcondiciones">
+                        <input type="checkbox"><span>Aceptas los terminos y condiciones de nuestro servicio</span>
+                    </div>
                     <div class="control">
-                        <input type="submit" value="Terminar el Registro">
+                        <input id="submit" type="submit" value="Terminar el Registro">
                     </div>
                 </form>
-                <div class="link-forgot-password">
-                    <a href="/login">Ya tienes una cuenta?</a>
+                <div class="enlaces">
+                    <div id="register">
+                        <a href="#">¿No tienes una cuenta? Crea una?</a>
+                    </div>
+                    <div id="register">
+                        <a href="#">¿Olvidaste tu contraseña?</a>
+                    </div>
                 </div>
             </div>
         </section>
