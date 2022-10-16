@@ -34,7 +34,7 @@ const autenticar = async (req, res) => {
     // Revisar el password
 
     // if(!Usuario.verificarPassword(password)){
-    //     return res.render('login');
+    //     return res.render('/');
     // };
 
      // Autenticar al usuario

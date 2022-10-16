@@ -1,4 +1,5 @@
 import { DataTypes } from "sequelize";
+import bcrypt from 'bcrypt'
 import db from '../config/db.js'
 
 //Creacion de plantilla de usuarios y cada atributo sera una columna
@@ -26,6 +27,26 @@ const usuario = db.define('usuarios', {
     },
     token: DataTypes.STRING,
     confirmado: DataTypes.BOOLEAN
+}, {
+    hooks: {
+        beforeCreate: async function(Usuario) {
+            const salt = await bcrypt.genSalt(10);
+            Usuario.password = await bcrypt.hash( Usuario.password, salt);
+        }
+    },
+    scopes: {
+        eliminarPassword:{
+            attributes: {
+                exclude: ['password', 'token', 'confirmado', 'createdAt', 'updatedAt']
+            }
+        }
+    }
 });
+
+// Metodos personalizados
+
+usuario.prototype.verificarPassword = function(password){
+    return bcrypt.compareSync(password, this.password)
+};
 
 export default usuario;
