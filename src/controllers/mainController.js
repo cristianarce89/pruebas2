@@ -20,6 +20,9 @@ const mainController = {
     },
     productEdit: (req,res) => {
         res.render('productEdit')
+    },
+    adminPanel: (req,res) => {
+        res.render('adminPanel')
     }
 }
 

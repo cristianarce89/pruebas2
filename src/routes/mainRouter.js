@@ -18,5 +18,7 @@ router.get('/productEdit', mainController.productEdit);
 
 router.get('/productCart', mainController.productCart);
 
+router.get('/adminPanel', mainController.adminPanel)
+
 
 export default router;
