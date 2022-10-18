@@ -19,54 +19,50 @@
 
 <body>
 	<div class="container productCreate">
-		<form action="/products" method="POST" enctype="multipart/form-data" class="formulario">
+		<form action="/productos/productCreate" method="POST" class="formulario">
 			<div class="container titulo">
 				<h2 class="products-title">Formulario<br> Creación de productos</h2>
 			</div>
 			<div class="row nameProduct">	
-				<input type="text" id="nombre" name="nombre" class="formulario__input">			
-				<label for="nombre" class="formulario__label">Nombre del producto</label>
-				
-			</div>
-			<div class="row priceProduct">
-				<input type="text" id="price" name="price" class="formulario__input">
-				<label for="price" class="formulario__label">Precio del producto</label>
-				
-			</div>
-			<div class="row discount">
-				<input type="text" id="discount" name="discount" class="formulario__input">
-				<label for="discount" class="formulario__label">Descuento:</label>
-				
-			</div>
-			<div class="row category">
-				<label for="category">Categoría:</label>
-				<select name="category" id="category" class="formulario__select">
-					<option value="">Hombres</option>
-					<option value="in-sale">Mujeres</option>
-					<option value="visited">Niños</option>
-				</select>
-			</div>
-			<div class="type_radio">
-				<label for="typeTenis_reebok">
-					<input type="radio" name="typeTenis" />
-					Reebok
-				</label>
-				<label for="typeTenis_adidas">
-					<input type="radio" name="typeTenis" />
-					Adidas
-				</label>
-				<label for="typeTenis_nike">
-					<input type="radio" name="typeTenis" />
-					Nike
-				</label>
+				<input type="text" id="titulo" name="titulo" class="formulario__input">			
+				<label for="titulo" class="formulario__label">Nombre del producto</label>
 				
 			</div>
 			<div class="row description">
-				<label for="description" class="">Descripción:</label>
-				<textarea name="description" id="description" class="formulario__textArea"></textarea>
+				<label for="descripcion" class="">Descripción:</label>
+				<textarea name="descripcion" id="descripcion" class="formulario__textArea"></textarea>
+			</div>
+			<div class="row priceProduct">
+				<input type="precio" id="precio" name="precio" class="formulario__input">
+				<label for="precio" class="formulario__label">Precio del producto</label>
+			</div>
+			<div class="row discount">
+				<input type="descuento" id="descuento" name="descuento" class="formulario__input">
+				<label for="descuento" class="formulario__label">Descuento</label>
+			</div>
+
+			<div class="row category">
+				<label for="categoria">Categorías</label>
+				<select name="categoria" id="categoria" class="formulario__select">
+					<option value="">-- Selecciona --</option>
+				</select>
+			</div>
+			<div class="row category">
+				<label for="tallas">Tallas</label>
+				<select name="tallas" id="tallas" class="formulario__select">
+					<option value="">-- Selecciona --</option>
+					
+				</select>
+			</div>
+			<div class="row category">
+				<label for="marcas">Marcas</label>
+				<select name="marcas" id="marcas" class="formulario__select">
+					<option value="">-- Selecciona --</option>
+					
+				</select>
 			</div>
 			<div class="add-new-photo first" id="add-photo">
-				<input type="file" id="add_imagen" name="add_imagen" class="add_imagen" multiple>
+				<input type="file" id="imagen" name="imagen" class="imagen" multiple>
 				<button type="button" id="boton_add" class="boton_add">
 					<div>
 						<i class="fa-solid fa-image"></i>

@@ -1,24 +1,24 @@
 import { Producto, Talla, Marca, Categoria } from "../../models/index.js";
 import { validationResult } from "express-validator";
 
-const admin = (req, res) => { res.render('productos/admin') };
+const admin = (req, res) =>  res.render('admin/adminPanel');
 
 // Formulario para crear nuevos productos
 const crear = async (req, res) => {
-    // consultar a la base de datos por los precios y categorias
+    // consultar a la base de datos .. categorias
     const [categorias, marcas, tallas] = await Promise.all([
         Categoria.findAll(),
         Talla.findAll(),
         Marca.findAll()
     ]);
-
-    res.render('productos/crear', {
+    
+    res.render('productos/productCreate', {
         categorias,
         marcas,
-        tallas,
-        datos: {}
+        tallas
     });
 };
+
 
 const guardar = async (req, res) => {
     // Validacion
@@ -32,7 +32,7 @@ const guardar = async (req, res) => {
             marcas.findAll()
         ]);
 
-        return res.render('productos/crear', {
+        return res.render('productos/productCreate', {
             categorias,
             marcas,
             tallas,
@@ -42,20 +42,17 @@ const guardar = async (req, res) => {
     };
 
     // Crear un registro
-    const { titulo, descripcion, marcas: marcasId, tallas: tallasId, categoria: categoriaId } = req.body
+    const { titulo, precio, descuento, descripcion, marcas: marcasId, tallas: tallasId, categoria: categoriaId } = req.body
 
-    const { id: usuarioId } = req.Usuario 
 
     try {
-            const productoGuardado = await Propiedad.create({
+        const productoGuardado = await Producto.create({
             titulo,
-            descripcion, 
-            marcasId,
-            tallasId,
-            categoriaId,
-            usuarioId,
+            descripcion,
+            precio,
+            descuento,
             imagen: ''
-            })
+        })
 
         } catch (error) {
         console.log(error);
@@ -67,4 +64,4 @@ export {
     admin,
     crear,
     guardar
-};
+}

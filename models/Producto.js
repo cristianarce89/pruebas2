@@ -16,7 +16,15 @@ const Producto = db.define('producto', {
         type: DataTypes.TEXT,
         allowNull: false
     },
+    precio: {
+        type: DataTypes.TEXT,
+        allowNull: false
+    },
     imagen: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    descuento: {
         type: DataTypes.STRING,
         allowNull: false
     },

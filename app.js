@@ -4,8 +4,7 @@ import usuarioRoutes from './src/routes/usuarioRouter.js';
 import cookieParser from 'cookie-parser';
 import db from './config/db.js';
 import {fileURLToPath} from 'url';
-// const usuarioRoutes = require('./routes/usuarioRoutes');
-// const usuarioRoutes = require('./routes/usuarioRoutes.js');
+import productRoutes from './src/routes/productosRoutes.js'
 
 // Actualizando el dirname para trabajar con modulos
 const __filename = fileURLToPath(import.meta.url);
@@ -38,6 +37,9 @@ app.set('views', path.join(__dirname, 'src/views'));
 
 app.use('/views', usuarioRoutes)
 app.use('/', usuarioRoutes)
+
+// Productos routes
+app.use('/', productRoutes)
 
 
 const port = process.env.PORT || 3000;
