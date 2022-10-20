@@ -6,44 +6,45 @@ const admin = (req, res) =>  res.render('admin/adminPanel');
 // Formulario para crear nuevos productos
 const crear = async (req, res) => {
     // consultar a la base de datos .. categorias
-    const [categorias, marcas, tallas] = await Promise.all([
+    const [categorias, tallas, marcas ] = await Promise.all([
         Categoria.findAll(),
         Talla.findAll(),
         Marca.findAll()
     ]);
-    
+
     res.render('productos/productCreate', {
         categorias,
+        tallas,
         marcas,
-        tallas
+        datos: {}
     });
 };
 
 
 const guardar = async (req, res) => {
     // Validacion
+
     let resultado = validationResult(req);
 
     if(!resultado.isEmpty()){
 
         const [categorias, tallas, marcas] = await Promise.all([
-            Categoria.findAll(),
+            categorias.findAll(),
             tallas.findAll(),
             marcas.findAll()
         ]);
 
         return res.render('productos/productCreate', {
             categorias,
-            marcas,
             tallas,
+            marcas,
             errores: resultado.array(),
             datos: req.body
         });
     };
 
     // Crear un registro
-    const { titulo, precio, descuento, descripcion, marcas: marcasId, tallas: tallasId, categoria: categoriaId } = req.body
-
+    const { titulo, descripcion, precio, descuento, categoria: categoriaId, tallas: tallaId, marcas: marcaId } = req.body
 
     try {
         const productoGuardado = await Producto.create({
@@ -51,6 +52,9 @@ const guardar = async (req, res) => {
             descripcion,
             precio,
             descuento,
+            categoriaId,
+            tallaId,
+            marcaId,
             imagen: ''
         })
 

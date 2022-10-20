@@ -4,10 +4,6 @@ import { admin, crear, guardar } from '../controllers/productoController.js'
 
 const router = express.Router();
 
-router.get('/productCreate', (req, res) => {
-    res.render('productos/productCreate');
-});
-
 router.get('/productDetail', (req, res) => {
     res.render('productos/productDetail');
 })
@@ -20,8 +16,9 @@ router.get('/productList', (req, res) => {
     res.render('productos/productList');
 })
 
-router.get('/productos/productCreate', crear);
-router.post('/productos/ProductCreate', guardar);
+router.get('/adminPanel', admin)
+router.get('/productCreate', crear);
+router.post('/ProductCreate', guardar);
 
 // router.get('/propiedades/agregar-imagen/:id', 
 //     protegerRuta,

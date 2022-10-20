@@ -3,7 +3,7 @@ import db from '../config/db.js'
 
 const Talla = db.define('tallas', {
     nombre: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(30),
         allowNull: false
     }
 });

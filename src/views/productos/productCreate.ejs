@@ -2,80 +2,84 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans:wght@300&family=Roboto:wght@100;400&family=Rubik+Marker+Hatch&display=swap"
-        rel="stylesheet">
-	<link rel="stylesheet" href="/stylesheets/header.css">
-	<link rel="stylesheet" href=/stylesheets/productCreate.css>
-	<link rel="stylesheet" href=/stylesheets/footer.css>
-	<script src="https://kit.fontawesome.com/60737454c2.js" crossorigin="anonymous"></script>	
-	<title>Readni Creacion de producto</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans:wght@300&family=Roboto:wght@100;400&family=Rubik+Marker+Hatch&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/header.css">
+  <link rel="stylesheet" href=/stylesheets/productCreate.css>
+  <link rel="stylesheet" href=/stylesheets/footer.css>
+  <script src="https://kit.fontawesome.com/60737454c2.js" crossorigin="anonymous"></script>
+  <title>Readni Creacion de producto</title>
 </head>
 
 <body>
-	<div class="container productCreate">
-		<form action="/productos/productCreate" method="POST" class="formulario">
-			<div class="container titulo">
-				<h2 class="products-title">Formulario<br> Creación de productos</h2>
-			</div>
-			<div class="row nameProduct">	
-				<input type="text" id="titulo" name="titulo" class="formulario__input">			
-				<label for="titulo" class="formulario__label">Nombre del producto</label>
-				
-			</div>
-			<div class="row description">
-				<label for="descripcion" class="">Descripción:</label>
-				<textarea name="descripcion" id="descripcion" class="formulario__textArea"></textarea>
-			</div>
-			<div class="row priceProduct">
-				<input type="precio" id="precio" name="precio" class="formulario__input">
-				<label for="precio" class="formulario__label">Precio del producto</label>
-			</div>
-			<div class="row discount">
-				<input type="descuento" id="descuento" name="descuento" class="formulario__input">
-				<label for="descuento" class="formulario__label">Descuento</label>
-			</div>
+  <div class="container productCreate">
+    <form action="/ProductCreate" method="POST" class="formulario">
+      <div class="container titulo">
+        <h2 class="products-title">Formulario<br> Creación de productos</h2>
+      </div>
+      <div class="row nameProduct">
+        <input type="text" id="titulo" name="titulo" class="formulario__input">
+        <label for="titulo" class="formulario__label">Nombre del producto</label>
+      </div>
+      <div class="row description">
+        <label for="descripcion" class="">Descripción:</label>
+        <textarea name="descripcion" id="descripcion" class="formulario__textArea"></textarea>
+      </div>
+      <div class="row priceProduct">
+        <input type="precio" id="precio" name="precio" class="formulario__input">
+        <label for="precio" class="formulario__label">Precio del producto</label>
+      </div>
+      <div class="row discount">
+        <input type="descuento" id="descuento" name="descuento" class="formulario__input">
+        <label for="descuento" class="formulario__label">Descuento</label>
+      </div>
 
-			<div class="row category">
-				<label for="categoria">Categorías</label>
-				<select name="categoria" id="categoria" class="formulario__select">
-					<option value="">-- Selecciona --</option>
-				</select>
-			</div>
-			<div class="row category">
-				<label for="tallas">Tallas</label>
-				<select name="tallas" id="tallas" class="formulario__select">
-					<option value="">-- Selecciona --</option>
-					
-				</select>
-			</div>
-			<div class="row category">
-				<label for="marcas">Marcas</label>
-				<select name="marcas" id="marcas" class="formulario__select">
-					<option value="">-- Selecciona --</option>
-					
-				</select>
-			</div>
-			<div class="add-new-photo first" id="add-photo">
-				<input type="file" id="imagen" name="imagen" class="imagen" multiple>
-				<button type="button" id="boton_add" class="boton_add">
-					<div>
-						<i class="fa-solid fa-image"></i>
-					</div>					
-					Agrega una imagen
-				</button>
-			</div>
-			<div class="button saveProduct">
-				<button type="submit" class="formulario__submit">Guardar producto</button>
-			</div>
-		</form>
-	</div>
-	<script src="/javascripts/productCreate.js"></script>
+      <div class="row category">
+        <label for="categoria">Categorías</label>
+        <select name="categoria" id="categoria" class="formulario__select">
+          <option value="">-- Selecciona --</option>
+		  <% categorias.forEach(categoria => {%>
+			<option value=<%= categoria.dataValues.id %>><%= categoria.dataValues.nombre %></option>
+		  <% }); %> 
+        </select>
+      </div>
+      <div class="row category">
+        <label for="tallas">Tallas</label>
+        <select name="tallas" id="tallas" class="formulario__select">
+           <option value="">-- Selecciona --</option>
+		   <% tallas.forEach(talla => {%>
+			 <option value=<%= talla.dataValues.id %>><%= talla.dataValues.nombre %></option>
+		   <% }); %> 
+        </select>
+      </div>
+      <div class="row category">
+        <label for="marcas">Marcas</label>
+        <select name="marcas" id="marcas" class="formulario__select">
+          <option value="">-- Selecciona --</option>
+		  <% marcas.forEach(marca => {%>
+			<option value=<%= marca.dataValues.id %>><%= marca.dataValues.nombre %></option>
+		  <% }); %> 
+
+        </select>
+      </div>
+      <div class="add-new-photo first" id="add-photo">
+        <input type="file" id="imagen" name="imagen" class="imagen" multiple>
+        <button type="button" id="boton_add" class="boton_add">
+          <div>
+            <i class="fa-solid fa-image"></i>
+          </div>
+          Agrega una imagen
+        </button>
+      </div>
+      <div class="button saveProduct">
+        <button type="submit" class="formulario__submit">Guardar producto</button>
+      </div>
+    </form>
+  </div>
 </body>
 
 </html>

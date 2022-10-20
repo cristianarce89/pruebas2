@@ -33,7 +33,7 @@ app.use(express.static('public'));
 
 // Habilitar vista con modulos y ejs
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'src/views'));
+app.set('views', 'src/views');
 
 app.use('/views', usuarioRoutes)
 app.use('/', usuarioRoutes)
@@ -44,3 +44,4 @@ app.use('/', productRoutes)
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`servidor corriendo en el puerto ${port}`));
+

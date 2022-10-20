@@ -3,7 +3,7 @@ import db from '../config/db.js'
 
 const Marca = db.define('marcas', {
     nombre: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(30),
         allowNull: false
     }
 });
