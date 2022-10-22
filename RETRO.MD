@@ -79,8 +79,7 @@ analisis de trabajo en equipo
 en este sprint 3, hubo un excelente trabajo de los compañeros 
 la idea es seguir mejorando en todo el proyecto y como grupo, cada dia vamos aprendiendo cosas nuevas, dificiles pero todos con toda la actitud de avnzae y prosperar.
 
----------------------------------------------------------------------------
-
+-----------------------------------------------------------------------
 Retrospectiva del sprint tres.
 
 el objetivo de esta reunión o encuentros,  no es otro que mejorar para la próximas reuniones y actividades. queremos  mejorar día a día,ya que para algunos compañeros se dificulta entender  algunos programas, codigos.
