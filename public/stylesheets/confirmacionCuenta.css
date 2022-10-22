@@ -1,0 +1,19 @@
+
+.container {
+    display: grid;
+    justify-content: center;
+    margin-top: 50px;
+    justify-items: center;
+}
+
+.btn {
+    background-color: blue;
+    display: block;
+    color: #fff;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color 0.3s ease-out;
+    border: none;
+    text-decoration: none;
+    padding-bottom: 10px;
+  }

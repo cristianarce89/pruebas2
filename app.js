@@ -1,41 +1,47 @@
-const createError = require('http-errors');
-const express = require('express');
-const path = require('path');
-const cookieParser = require('cookie-parser');
-const logger = require('morgan');
+import express from 'express';
+import path from 'path';
+import usuarioRoutes from './src/routes/usuarioRouter.js';
+import cookieParser from 'cookie-parser';
+import db from './config/db.js';
+import {fileURLToPath} from 'url';
+import productRoutes from './src/routes/productosRoutes.js'
 
-var indexRouter = require('./src/routes/index.js');
-// var usersRouter = require('./src/routes/users.js');
+// Actualizando el dirname para trabajar con modulos
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
+// Crear el app
 const app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, '/src/views'));
-app.set('view engine', 'ejs');
+// Habilitar lectura de datos de formularios
+app.use( express.urlencoded({extended: true}));
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+// Habilitar cookie parser
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-// app.use('/users', usersRouter);
+// Conexion a la base de datos
+try {
+    await db.authenticate();
+    db.sync();
+    console.log('Conexion correcta a la base datos');
+} catch (error) {
+    console.log(error);
+};
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
+// Carpeta public es el contenedor de archivos estaticos
+app.use(express.static('public'));
 
-// error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+// Habilitar vista con modulos y ejs
+app.set('view engine', 'ejs');
+app.set('views', 'src/views');
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('index');
-});
+app.use('/views', usuarioRoutes)
+app.use('/', usuarioRoutes)
 
-module.exports = app;
+// Productos routes
+app.use('/', productRoutes)
+
+
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`servidor corriendo en el puerto ${port}`));
+

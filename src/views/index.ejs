@@ -2,18 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans:wght@300&family=Roboto:wght@100;400&family=Rubik+Marker+Hatch&display=swap"
-        rel="stylesheet">
+    <%- include('./partials/head.ejs') %>
     <link href="stylesheets/index.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" rel="stylesheet">
     <!-- libreria de slider movil -->
-    <script src="https://kit.fontawesome.com/60737454c2.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" rel="stylesheet">     
     <title>ReeAdNi</title>
 </head>
 
@@ -150,16 +142,14 @@
         <h1 class="titulo-compra">¿Para Quién Compras?</h1>
         <div class="container-img-genero">
             <div class="container-genero">
-                <img src="https://i.postimg.cc/MG0ZdM6C/hombre1.jpg" alt="hombres">
-                <a href="#">Hombre</a>
+                <a href="#"><img src="https://i.postimg.cc/MG0ZdM6C/hombre1.jpg" alt="hombres">Hombre</a>
             </div>
             <div class="container-genero">
-                <img src="https://i.postimg.cc/ZRTbgb0C/mujer.jpg" alt="mujeres">
-                <a href="#">Mujer</a>
+                <a href="#"><img src="https://i.postimg.cc/ZRTbgb0C/mujer.jpg" alt="mujeres">Mujer</a>
+                
             </div>
             <div class="container-genero">
-                <img src="https://i.postimg.cc/4dBfRDhw/ni-o4.jpg" alt="niños">
-                <a href="#">Niños</a>
+                <a href="#"><img src="https://i.postimg.cc/4dBfRDhw/ni-o4.jpg" alt="niños">Niños</a>                
             </div>
         </div>
     </section>
@@ -459,7 +449,7 @@
         <%- include('./partials/footer.ejs') %> 
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script src="/slider.js"></script>
+    <script src="/javascripts/slider.js"></script>
 </body>
 
 </html>
