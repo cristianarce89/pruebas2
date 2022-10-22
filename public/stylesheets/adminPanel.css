@@ -1,21 +1,24 @@
-:root{
+:root {
     --texto-principal: 'Roboto', sans-serif;
     --texto-segundario: 'Open Sans', sans-serif;
     --texto-comentarios: 'Indie Flower', cursive;
-    --texto-tituloComentarios: 'Rubik Marker Hatch', cursive;;
+    --texto-tituloComentarios: 'Rubik Marker Hatch', cursive;
+    ;
     --color-fondo: #ffffff;
     --color-grisTenue: #f5f5f5;
     --color-gris: #7e7e7e;
     --color-oscuro: #111111;
-    --green:   #00ffb3;
+    --green: #00ffb3;
+    --primary: #2175f5;
 }
 
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -23,97 +26,563 @@ html {
     font-size: 62.5%;
 }
 
-main{
+main {
     position: absolute;
-    top:0;
+    top: 0;
     z-index: -1;
     min-width: 100vw;
-    min-height:100vh;
+    min-height: 90rem;
     background-image: url("https://i.postimg.cc/44KmbzXs/fondo-Imagen.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
-.container-header{
+.container-header {
     display: flex;
     justify-content: space-around;
     width: 100%;
     height: 8rem;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     opacity: 20;
-    
+
 }
 
-.container-logo{
+.container-logo {
     width: 80rem;
     margin-right: 10rem;
 }
 
-.logo{
+.logoReadni {
     width: 25rem;
     height: 100%;
 }
 
-.navegacion{
+.navegacion {
     margin: auto 0;
 }
 
-.navegacion ul{
+.navegacion ul {
     display: flex;
     justify-content: center;
-	list-style: none;
-	padding: 0 1rem;
-    
+    list-style: none;
+    padding: 0 1rem;
+
 }
 
-.navegacion ul li{
-	position: relative;
-	transition: .3s linear;
-	z-index: 1000;
+.navegacion ul li {
+    position: relative;
+    transition: .3s linear;
+    z-index: 1000;
 }
 
-.navegacion ul li:hover{
-	transform: scale(1.1);
+.navegacion ul li:hover {
+    transform: scale(1.1);
 }
 
-.navegacion ul li a{
+.navegacion ul li a {
     justify-content: space-around;
-	color: var(--color-fondo);
-	text-transform: uppercase;
-	font-size: 1.8rem;
+    color: var(--color-fondo);
+    text-transform: uppercase;
+    font-size: 1.8rem;
     font-family: var(--texto-tituloComentarios);
-	padding: 12px 20px;
-	transition: .3s linear;
+    padding: 12px 20px;
+    transition: .3s linear;
 }
 
-.navegacion ul li a:hover{
-	color: var(--color-gris);
-	transform: scale(1.1);
+.navegacion ul li a:hover {
+    color: var(--color-gris);
+    transform: scale(1.1);
 }
 
-.titulo{
+.titulo {
     width: 20rem;
     margin: 0 auto;
-    margin-top: calc(40vh - 148px);
+    margin-top: 9rem;
 }
 
-.logo2{
+.logo2 {
     width: 20rem;
     opacity: .8;
 }
 
-h1{
+.h1-title {
     width: 10rem;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     margin: 0 auto;
     color: #ffffff;
-    font-size: 3rem;   
+    font-size: 3rem;
 }
 
 
-/* Estilos de botones neon */
+/* -------------ESTILOS DE LA CARD ------------------*/
 
-.containerBoton{
+.container {
+    margin-top: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    overflow: hidden;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 860px;
+}
+
+.shoeBackground {
+    position: relative;
+    width: 50%;
+    height: 475px;
+    box-shadow: -15px 0 35px rgba(0, 0, 0, 0.1),
+        0 -15px 35px rgba(0, 0, 0, 0.1),
+        0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: .5s;
+}
+
+.gradients {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+}
+
+.first {
+    z-index: 0;
+    animation: 1s width ease;
+}
+
+@keyframes width {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.second {
+    z-index: -1;
+}
+
+.gradient[color="blue"] {
+    background-image: linear-gradient(45deg, #0136af, #22abfa);
+}
+
+.gradient[color="red"] {
+    background-image: linear-gradient(45deg, #d62926, #ee625f);
+}
+
+.gradient[color="green"] {
+    background-image: linear-gradient(45deg, #11998e, #1ce669);
+}
+
+.gradient[color="orange"] {
+    background-image: linear-gradient(45deg, #fc4a1a, #f7b733);
+}
+
+.gradient[color="black"] {
+    background-image: linear-gradient(45deg, #111, #666);
+}
+
+.logo {
+    position: absolute;
+    width: 100px;
+    left: 20px;
+    top: 20px;
+}
+
+.share {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 2.08rem;
+    text-decoration: none;
+    color: var(--primary);
+    transition: .5s;
+}
+
+.share:hover {
+    transform: scale(1.1);
+}
+
+.share i {
+    line-height: 50px;
+}
+
+.nike {
+    position: absolute;
+    top: 85px;
+    left: 15px;
+    font-size: 17.6rem;
+    text-transform: uppercase;
+    line-height: .9;
+    color: #fff;
+    opacity: .1;
+}
+
+.shoe {
+    position: absolute;
+    width: 140%;
+    opacity: 0;
+    bottom: 0;
+    right: 0;
+    transform: rotate(-20deg);
+    transition: .5s;
+}
+
+.shoe.show {
+    opacity: 1;
+}
+
+.info {
+    width: 50%;
+    background-color: #fff;
+    z-index: 1;
+    padding: 65px 40px;
+    box-shadow: 15px 0 35px rgba(0, 0, 0, 0.1),
+        0 -15px 35px rgba(0, 0, 0, 0.1),
+        0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.shoeName {
+    padding: 0 0 10px 0;
+}
+
+.shoeName div {
+    display: flex;
+    align-items: center;
+}
+
+.shoeName div .big {
+    margin-right: 10px;
+    font-size: 3.2rem;
+    color: #333;
+    line-height: 1;
+}
+
+.shoeName div .new {
+    background-color: var(--primary);
+    text-transform: uppercase;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 5px;
+    transition: .5s;
+}
+
+.shoeName .small {
+    font-weight: 500;
+    font-size: 2rem;
+    color: #444;
+    margin-top: 3px;
+    text-transform: capitalize;
+}
+
+.shoeName,
+.description,
+.color-container,
+.size-container {
+    border-bottom: 1px solid #dadada;
+}
+
+.description {
+    padding: 10px 0;
+}
+
+.title {
+    color: #3a3a3a;
+    font-weight: 600;
+    font-size: 1.92rem;
+    text-transform: uppercase;
+}
+
+.text {
+    color: #555;
+    font-size: 17px;
+}
+
+.color-container {
+    padding: 10px 0;
+}
+
+.colors {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.color {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 0 10px;
+    border: 5px solid;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.color[color="blue"] {
+    background-color: #2175f5;
+    border-color: #2175f5;
+}
+
+.color[color="red"] {
+    background-color: #f84848;
+    border-color: #f84848;
+}
+
+.color[color="green"] {
+    background-color: #29b864;
+    border-color: #29b864;
+}
+
+.color[color="orange"] {
+    background-color: #ff5521;
+    border-color: #ff5521;
+}
+
+.color[color="black"] {
+    background-color: #444;
+    border-color: #444;
+}
+
+.color.active {
+    border-color: #fff;
+    box-shadow: 0 0 10px .5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+.size-container {
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.sizes {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.size {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: #eee;
+    margin: 0 10px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.76rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.size.active {
+    background-color: var(--primary);
+    color: #fff;
+    transition: .5s;
+}
+
+.buy-price {
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    color: #333;
+    display: flex;
+    align-items: flex-start;
+}
+
+.price h1 {
+    font-size: 3.36rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.price i {
+    font-size: 2.24rem;
+    margin-right: 1px;
+}
+
+.buy {
+    padding: 1.12rem 2.56rem;
+    background-color: var(--primary);
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 1.76rem;
+    transition: .5s;
+}
+
+.buy:hover {
+    transform: scale(1.1);
+}
+
+.buy i {
+    margin-right: 2px;
+}
+
+@media (max-width: 1070px) {
+    .shoe {
+        width: 135%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .card {
+        flex-direction: column;
+        width: 100%;
+        box-shadow: 0 0 35px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    .card>div {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .shoe {
+        width: 100%;
+        transform: rotate(-5deg) translateY(-50%);
+        top: 55%;
+        right: 2%;
+    }
+
+    .nike {
+        top: 20%;
+        left: 5%;
+    }
+}
+
+@media (max-width: 600px) {
+    .share {
+        width: 40px;
+        height: 40px;
+    }
+
+    .share i {
+        font-size: 2.56rem;
+        line-height: 40px;
+    }
+
+    .logo {
+        width: 70px;
+    }
+}
+
+@media (max-width: 490px) {
+    .nike {
+        font-size: 11.2rem;
+    }
+
+    .shoeName div .big {
+        font-size: 2.08rem;
+    }
+
+    .small {
+        font-size: 2.56rem;
+    }
+
+    .new {
+        padding: 2px 6px;
+        font-size: 1.44rem;
+    }
+
+    .title {
+        font-size: 1.44rem;
+    }
+
+    .text {
+        font-size: 1.28rem;
+    }
+
+    .buy {
+        padding: 0.8rem 1.28rem;
+        font-size: 1.28rem;
+    }
+
+    .price h1 {
+        font-size: 1.5rem;
+    }
+
+    .price i {
+        font-size: 1.44rem;
+    }
+
+    .size {
+        width: 30px;
+        height: 30px;
+        margin: 0 8px;
+        font-size: 1.44rem;
+        line-height: 30px;
+    }
+
+    .color {
+        margin: 0 6px;
+        width: 0 20px;
+        width: 20px;
+        height: 20px;
+        border-width: 4px;
+    }
+
+    .share {
+        width: 35px;
+        height: 35px;
+        top: 10px;
+        right: 10px;
+    }
+
+    .share i {
+        font-size: 1.28rem;
+        line-height: 35px;
+    }
+
+    .logo {
+        width: 60px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .info {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .buy i {
+        display: none;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
+
+/*----------------- Estilos de botones neon ----------------*/
+
+.containerBoton {
     display: flex;
     justify-content: center;
     margin-top: 20rem;
@@ -122,11 +591,11 @@ h1{
     height: 100%;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.boton{
+.boton {
     background-color: #000;
     position: relative;
     padding: 1rem 3rem;
@@ -137,62 +606,60 @@ a{
     font-size: 2rem;
     overflow: hidden;
     transition: 0.5s;
-    -webkit-box-reflect: below .1rem linear-gradient(transparent, #0003); /* Sombra */
+    -webkit-box-reflect: below .1rem linear-gradient(transparent, #0003);
+    /* Sombra */
 }
 
 /* edicion de color de los dos botones */
-.editar:nth-child(1){
-    filter:hue-rotate(115deg);
+.editar:nth-child(1) {
+    filter: hue-rotate(115deg);
 }
 
-.borrar:nth-child(1){
-    filter:hue-rotate(270deg);
+.borrar:nth-child(1) {
+    filter: hue-rotate(270deg);
 }
 
-.boton:hover{
+.boton:hover {
     background: #21ebff;
     color: #111;
     box-shadow: 0 0 5rem #21ebff;
-    transition-delay:0.3s;
+    transition-delay: 0.3s;
 }
 
-.boton:before{
+.boton:before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 1rem;
     height: 1rem;
-    border-top:.2rem solid #21ebff;
-    border-left:.2rem solid #21ebff;
+    border-top: .2rem solid #21ebff;
+    border-left: .2rem solid #21ebff;
     transition: 0.5s;
-    transition-delay:0.3s;
+    transition-delay: 0.3s;
 }
 
-.boton:hover:before{
+.boton:hover:before {
     width: 100%;
     height: 100%;
-    transition-delay:0s;
+    transition-delay: 0s;
 }
 
-.boton::after{
+.boton::after {
     content: '';
     position: absolute;
     bottom: 0;
     right: 0;
     width: 1rem;
     height: 1rem;
-    border-bottom:.2rem solid #21ebff;
-    border-right:.2rem solid #21ebff;
+    border-bottom: .2rem solid #21ebff;
+    border-right: .2rem solid #21ebff;
     transition: 0.5s;
-    transition-delay:0.3s;
+    transition-delay: 0.3s;
 }
 
-.boton:hover:after{
+.boton:hover:after {
     width: 100%;
     height: 100%;
-    transition-delay:0s;
+    transition-delay: 0s;
 }
-
-
-

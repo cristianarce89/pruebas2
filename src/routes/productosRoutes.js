@@ -4,6 +4,10 @@ import { admin, crear, guardar } from '../controllers/productoController.js'
 
 const router = express.Router();
 
+router.get('/products', (req,res) => {
+    res.render('productos/products');
+});
+
 router.get('/productDetail', (req, res) => {
     res.render('productos/productDetail');
 })
