@@ -109,7 +109,7 @@ const editar = async (req, res) => {
 const guardarCambios = async (req, res) => {
 
     const { id } = req.params
-    // Validar que la propiedad exista
+    // Validar que el producto exista
 
     const producto = await Producto.findByPk(id)
 
