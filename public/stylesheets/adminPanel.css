@@ -26,25 +26,13 @@ html {
     font-size: 62.5%;
 }
 
-main {
-    position: absolute;
-    top: 0;
-    z-index: -1;
-    min-width: 100vw;
-    min-height: 90rem;
-    background-image: url("https://i.postimg.cc/44KmbzXs/fondo-Imagen.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-}
-
 .container-header {
     display: flex;
     justify-content: space-around;
     width: 100%;
     height: 8rem;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #000;
     opacity: 20;
-
 }
 
 .container-logo {
@@ -113,8 +101,16 @@ main {
     font-size: 3rem;
 }
 
-
 /* -------------ESTILOS DE LA CARD ------------------*/
+
+.grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
 
 .container {
     margin-top: 15rem;
@@ -663,3 +659,4 @@ a {
     height: 100%;
     transition-delay: 0s;
 }
+
