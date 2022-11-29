@@ -1,0 +1,157 @@
+:root {
+    --texto-principal: 'Roboto', sans-serif;
+    --texto-segundario: 'Open Sans', sans-serif;
+    --texto-comentarios: 'Indie Flower', cursive;
+    --texto-tituloComentarios: 'Rubik Marker Hatch', cursive;;
+    --color-fondo: #ffffff;
+    --color-grisTenue: #f5f5f5;
+    --color-gris: #7e7e7e;
+    --color-oscuro: #111111;
+}
+
+/* --------------------FOOTER--------------------------- */
+
+.container-footer {
+    background-color: var(--color-oscuro);
+    font-family: var(--texto-principal);
+    padding: 2rem 0 0.5rem 0;
+}
+
+.locales-cercanos h2 {
+    color: var(--color-fondo);
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    padding-left: 2rem;
+}
+
+.container-footer span {
+    color: var(--color-gris);
+    padding: 1rem 0;
+    padding-left: 0.5rem;
+}
+
+.container-footer h1 {
+    color: var(--color-fondo);
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    padding-left: 2rem;
+}
+
+.acerca-reeadni p{
+    color: var(--color-grisTenue);
+    font-size: 1.2rem;
+    font-family: var(--texto-principal);
+    text-align: left;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.container-icons {
+    display: flex;
+    width: 50%;
+    max-width: 24.4rem;
+    padding: 2rem 0;
+    padding-left: 0.5rem;
+}
+
+.container-icons i {
+    margin: 0 auto;
+    font-size: 3rem;
+    color: var(--color-gris);
+}
+
+.ubicacion i {
+    color: var(--color-fondo);
+    padding: 1rem 0;
+    padding-left: 2rem;
+}
+
+.ubicacion {
+    margin-bottom: 1rem;
+}
+
+.ubicacion span {
+    color: var(--color-fondo);
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: 1rem;
+}
+
+.derechos-reservados p {
+    color: var(--color-grisTenue);
+    font-size: 1.2rem;
+    font-family: var(--texto-principal);
+    text-align: left;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.terminos-politicas p {
+    color: var(--color-grisTenue);
+    font-size: 1.2rem;
+    font-family: var(--texto-principal);
+    text-align: left;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 481px){
+    .acerca-reeadni{
+        display: none;
+    }
+}
+
+@media (min-width: 481px) {
+.container-locales {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-ubicacion-derechos{
+    display: flex;
+}
+
+.linea-separadora{
+    display: none;
+}
+
+.container-ubicacion-derechos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ubicacion {
+    margin-bottom: 0;
+}
+
+.derechos-reservados p{
+    margin-bottom: 0;
+}
+
+.terminos-politicas{
+    display: flex;
+    min-width: 40rem;
+}
+
+.terminos-politicas p{
+    margin-bottom: 0;
+}
+
+.acerca-reeadni{
+    margin-right: 10rem;
+}
+
+}
+
+@media (min-width: 769px) { 
+.acerca-reeadni{
+    margin-right: 30rem;
+}
+}
+
+@media (min-width: 950px) { 
+    .acerca-reeadni{
+        margin-right: 40rem;
+    }
+}

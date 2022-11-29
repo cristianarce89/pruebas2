@@ -1,0 +1,146 @@
+/* ------ Login y register ----- */
+body {
+  font-size: 16px;
+}
+
+
+.login-register-container {
+  text-transform: uppercase;
+}
+
+/* Seccion del registro */
+.login-register-container .registro {
+  position: relative;
+  height: 170vh;
+  width: 100%;
+  background-color: aquamarine;
+  background: url("https://i.postimg.cc/d0t5vBh9/fondo-login.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+/* Seccion del login */
+.login-register-container .login {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: aquamarine;
+  background: url("https://i.postimg.cc/d0t5vBh9/fondo-login.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+/* Fondo del fonmulario de login y register */
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6));
+  box-shadow: 0 15px 25px rgba(143, 124, 236, 0.7);
+  width: 45rem;
+  padding: 5rem 3rem;
+  border-radius: 1rem;
+}
+
+.form-container i {
+  color: #fff;
+}
+
+.form-container i:hover {
+  color: #8F7CEC;
+}
+
+.form-container select {
+  border-radius: 10px;
+  width: 80%;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+/* El h1 de login y register */
+.login-register-container h1 {
+  text-transform: uppercase;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 1em;
+  color: #fff;
+}
+
+/* Este es el input donde se ingresan los valores en ambos formularios */
+.control input {
+  width: 100%;
+  display: block;
+  padding: 1rem;
+  color: #000;
+  margin: 1em 0;
+  opacity: .6;
+  font-size: 20px;
+}
+
+.login-register-container label {
+  color: #fff;
+}
+
+/* El boton de aceptar terminos y condiciones */
+.TerminosYcondiciones span {
+  margin-left: 10px;
+  color: #fff;
+}
+
+.TerminosYcondiciones {
+  margin-top: 30px;
+}
+
+/* Boton de enviar el formulario */
+.control {
+  margin-top: 30px;
+}
+
+.control input[type="submit"] {
+  background: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  opacity: 0.7;
+  transform: opacity 0.3s ease;
+}
+
+#submit {
+  margin-top: 20px;
+  color: #CBBDDB;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  letter-spacing: 4px;
+  border: 1px solid #8F7CEC;
+}
+
+#submit:hover {
+  background: #8F7CEC;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #8F7CEC, 0 0 25px #8F7CEC, 0 0 50px #8F7CEC, 0 0 100px #8F7CEC;
+}
+
+/* El contenedor de contraseña perdida o niciar sesion */
+.enlaces {
+  display: flex;
+}
+
+#register {
+  font-size: 10px;
+  text-decoration: none;
+  color: #CBBDDB;
+  margin: auto;
+  width: 60%;
+  text-align: center;
+}
+
+#register a {
+  color: #e1e1e1;
+  text-decoration: none;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs') %>
+        <link href="/stylesheets/header.css" rel="stylesheet">
+        <link href="/stylesheets/footer.css" rel="stylesheet">
+        <link href="/stylesheets/admin/administrador.css" rel="stylesheet">
+        <title>Administrador Productos</title>
+</head>
+
+<body>
+    <header>
+        <!--------- BARRA NAVEGADOR CELULAR Y TABLET ---------->
+        <%- include('../partials/headerMobile.ejs') %>
+            <!--------- BARRA NAVEGADOR DESKTOP ---------->
+            <%- include('../partials/headerDesktop.ejs') %>
+    </header>
+    <main>
+        <div class="titulo">
+            <h1>Administrador de ProductoS</h1>
+            <a href="/" class="logo-header-desk1" target="blank">
+                <img src="https://i.postimg.cc/k4pnwh96/logo2.jpg" alt="Logo" class="logo">
+            </a>
+        </div>
+
+        <div class="containerBottons">
+            <div class="container-boton">
+                <a href="/productCreate">
+                    <button type="button" class="crear boton"><i class="fa-solid fa-circle-plus"></i> Agregar
+                        Producto</button>
+                </a>
+            </div>
+            <div class="container-boton">
+                <a href="/users">
+                    <button type="button" class="crear boton">Administrar usuarios</button>
+                </a>
+            </div>
+        </div>
+
+        <table class=" table">
+            <thead class="table-primary">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Ver</th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Borrar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% productos.forEach(productos=> { %>
+                    <tr>
+                        <td>
+                            <%= productos.id%>
+                        </td>
+                        <td>
+                            <%= productos.nombre%>
+                        </td>
+                        <td>
+                            <%= productos.categoria%>
+                        </td>
+                        <td><a href="/admin/productDetail/<%= productos.id%> ">
+                                <i class="fa-solid fa-eye"></i>
+                            </a></td>
+                        <td><a href="/admin/productEdit/<%= productos.id%> ">
+                                <i class="fa-solid fa-pen"></i>
+                            </a></td>
+                        <td><a href="/admin/productDelete/<%= productos.id%>">
+                                <i class="fa-solid fa-trash"></i>
+                            </a></td>
+                    </tr>
+                    <% }); %>
+            </tbody>
+        </table>
+    </main>
+
+    <footer class="container-footer">
+        <%- include('../partials/footer.ejs') %>
+    </footer>
+
+</body>
+
+</html>

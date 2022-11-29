@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" href=/stylesheets/productCreate.css>
+    <link rel="stylesheet" href=/stylesheets/footer.css>
+    <title>Reeadni Creacion de producto</title>
+</head>
+
+<body>
+  <header>
+    <!--------- BARRA NAVEGADOR CELULAR Y TABLET ---------->
+    <%- include('../partials/headerMobile.ejs') %> 
+    <!--------- BARRA NAVEGADOR DESKTOP ---------->
+    <%- include('../partials/headerDesktop.ejs') %> 
+</header>
+
+  <div class="container productCreate">
+    <!-- en el action ponemos la ruta del formulario que va capturar los datos, en enctype es para que los datos viajen-->
+    <form action="/productCreate" method="POST" class="formulario" enctype="multipart/form-data">
+      <div class="container titulo">
+        <h2 class="products-title">Formulario<br> Creación de productos</h2>
+      </div>
+      <div class="row nameProduct">
+        <input type="text" id="nombre" name="nombre" class="formulario__input">
+        <label for="titulo" class="formulario__label">Nombre del producto</label>
+      </div>
+      <div class="row description">
+        <label for="descripcion" class="" name="descripcion">Descripción:</label>
+        <textarea name="descripcion" id="descripcion" class="formulario__textArea"></textarea>
+      </div>
+      <div class="row priceProduct">
+        <input type="number" id="precioAnt" name="precioAnt" class="formulario__input">
+        <label for="precioAnt" class="formulario__label">Precio anterior del producto</label>
+      </div>
+      <div class="row priceProduct">
+        <input type="number" id="precio" name="precio" class="formulario__input">
+        <label for="precio" class="formulario__label">Precio actual del producto</label>
+      </div>
+      <div class="row discount">
+        <input type="number" id="descuento" name="descuento" class="formulario__input">
+        <label for="descuento" class="formulario__label">Descuento</label>
+      </div>
+      <div class="row discount">
+        <input type="number" id="ranking" name="ranking" class="formulario__input" min="1" max="5">
+        <label for="ranking" class="formulario__label">Valor en estrellas</label>
+      </div>
+      <div class="row nameProduct">
+        <input type="text" id="color" name="color" class="formulario__input">
+        <label for="color" class="formulario__label">Color</label>
+      </div>
+
+      <div class="row category">
+        <label for="categoria">Categorías</label>
+        <select name="categoria" id="categoria" class="formulario__select">
+          <option value="">-- Selecciona --</option>
+          <option value="Hombre">Hombre</option>
+          <option value="Mujer">Mujer</option>
+          <option value="Niño">Niño</option>
+        </select>
+      </div>
+
+      <div class="row category">
+        <label for="tallas">Tallas</label>
+        <select name="talla" id="tallas" class="formulario__select">
+          <option value="35">-- Selecciona --</option>
+          <option value="36">36</option>
+          <option value="37">37</option>
+          <option value="38">38</option>
+          <option value="39">39</option>
+          <option value="40">40</option>
+          <option value="41">41</option>
+          <option value="42">42</option>
+        </select>
+      </div>
+
+      <div class="row category">
+        <label for="marca">Marcas</label>
+        <select name="marca" id="marcas" class="formulario__select">
+          <option value="">-- Selecciona --</option>
+          <option value="Reebok">Reebok</option>
+          <option value="Adidas">Adidas</option>
+          <option value="Nike">Nike</option>
+        </select>
+      </div>
+
+      <div class="add-new-photo first" id="add-photo">
+        <input type="file" id="imagen" name="imagen" class="formulario__input">
+        <button type="button" id="boton_add" class="boton_add">
+          <div>
+            <i class="fa-solid fa-image"></i>
+          </div>
+          Agrega una imagen
+        </button>
+      </div>
+
+      <div class="button saveProduct">
+          <button type="submit" class="formulario__submit">Guardar producto</button>
+      </div>
+
+    </form>
+  </div>
+
+  <script src="/javascripts/productCreate.js"></script>
+
+  <footer class="container-footer">
+    <%- include('../partials/footer.ejs') %> 
+  </footer>
+</body>
+
+</html>

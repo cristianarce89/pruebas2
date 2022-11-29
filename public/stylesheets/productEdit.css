@@ -1,0 +1,145 @@
+:root {
+    --texto-principal: 'Roboto', sans-serif;
+    --texto-segundario: 'Open Sans', sans-serif;
+    --texto-comentarios: 'Indie Flower', cursive;
+    --texto-tituloComentarios: 'Rubik Marker Hatch', cursive;;
+    --color-fondo: #ffffff;
+    --color-grisTenue: #f5f5f5;
+    --color-gris: #7e7e7e;
+    --color-oscuro: #111111;
+}
+
+* {
+    /*para q no se añada el padding y el border de mas y no genere scroll*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: var(--texto-principal);
+}
+
+html {
+    /*esto es para que un rem equivale a 1.0; 1rem= 10px; 1.8rem= 18px;*/
+    font-size: 62.5%;
+    text-decoration: none;
+    list-style: none;
+}
+
+.productCreate {
+    width: 50rem;
+    max-width: 100%;
+    margin: 2rem auto;
+    padding: 2rem;
+    box-shadow: 0 0 2rem 0.1rem rgba(0,0,0,0.3);
+}
+
+.formulario{
+    position: relative;
+}
+
+.titulo{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: rgba(0,0,0,0.7);
+    font-size: 1.8rem;
+    font-family: var(--texto-tituloComentarios);
+}
+
+.formulario__input, .formulario__label, .formulario__submit{
+    display: block;
+    width: 100%;
+    font-size: 1.4rem;
+}
+
+.formulario__input{
+    padding: 2rem;
+    background: rgba(0,0,0,0.1);
+    border: 0.1rem solid rgba(0,0,0,0.3);
+    margin-bottom: 4rem;
+}
+
+.formulario__input:focus{
+    outline: .1rem solid rgba(0,0,0,0.7);
+}
+
+.formulario__input:focus + .formulario__label{
+    margin-top: -12rem;
+}
+
+.formulario__label{
+    padding-left: 1.5rem;
+    position: absolute;
+    margin-top: -12rem;
+    z-index: -20;
+    color: rgba(0,0,0,0.5);
+    transition: all 0.2s;
+}
+
+.formulario__submit{
+    background-color: rgba(0,0,0,0.7);
+    color: #ffffff;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border: none;
+}
+
+.formulario__select{
+    display: block;
+    width: 100%;
+    font-size: 1.4rem;
+    padding: 2rem;
+    background: rgba(0,0,0,0.1);
+    border: 0.1rem solid rgba(0,0,0,0.3);
+    margin-bottom: 2rem;
+}
+
+.type_radio{
+    font-size: 1.8rem;
+    display: flex;   
+    justify-content:space-around; 
+    margin: 0 5rem;
+    margin-bottom: 2rem;
+}
+
+.formulario__textArea{
+    display: block;
+    width: 100%;
+    font-size: 1.4rem;
+    padding: 2rem;
+    background: rgba(0,0,0,0.1);
+    border: 0.1rem solid rgba(0,0,0,0.3);
+    margin-bottom: 2rem;
+}
+
+.fijar{
+    margin-top: -12rem;
+}
+
+.description, .category{
+    font-size: 1.4rem;
+}
+
+#imagen{
+    display:none
+}
+
+.boton_add{
+    display: block;
+    margin: 0 auto;
+    width: 30rem;
+    height: 30rem;
+    margin-bottom: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-image{
+    font-size: 8rem;
+}
+
+img {
+    width: 30rem;
+    height: 30rem;
+}

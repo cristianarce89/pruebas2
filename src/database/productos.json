@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "nombre": "zapatilla",
+    "descripcion": "lorem-ipsun",
+    "precioAnt": "280000",
+    "precio": "245000",
+    "descuento": "5",
+    "ranking": "4",
+    "color": "azul",
+    "categoria": "hombre",
+    "talla": "40",
+    "marca": "nike",
+    "imagen": "zapatilla.jpg"
+  }
+]

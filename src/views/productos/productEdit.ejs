@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs') %>
+        <link rel="stylesheet" href="/stylesheets/header.css">
+        <link rel="stylesheet" href=/stylesheets/productEdit.css>
+        <link rel="stylesheet" href=/stylesheets/footer.css>
+        <title>Reeadni Actualizacion de producto</title>
+</head>
+
+<body>
+    <header>
+        <!--------- BARRA NAVEGADOR CELULAR Y TABLET ---------->
+        <%- include('../partials/headerMobile.ejs') %>
+            <!--------- BARRA NAVEGADOR DESKTOP ---------->
+            <%- include('../partials/headerDesktop.ejs') %>
+    </header>
+
+    <div class="container productCreate">
+        <!-- en el action ponemos la ruta del formulario que va capturar los datos, en enctype es para que los datos viajen-->
+        <form action="/admin/productEdit/<%= productoEditar.id%>" method="POST" class="formulario" enctype="multipart/form-data">
+            <div class="container titulo">
+                <h2 class="products-title">Formulario<br> Actualizacion de productos</h2>
+            </div>
+            <div class="row nameProduct">
+                <input type="text" id="nombre" name="nombre" class="formulario__input" value="<%= productoEditar.nombre%>">
+                <label for="titulo" class="formulario__label">Nombre del producto</label>
+            </div>
+            <div class="row description">
+                <label for="descripcion" class="" name="descripcion" >Descripción:</label>
+                <textarea name="descripcion" id="descripcion" class="formulario__textArea" value="<%= productoEditar.descripcion%>"></textarea>
+            </div>
+            <div class="row priceProduct">
+                <input type="number" id="precioAnt" name="precioAnt" class="formulario__input" value="<%= productoEditar.precioAnt%>">
+                <label for="precioAnt" class="formulario__label">Precio anterior del producto</label>
+            </div>
+            <div class="row priceProduct">
+                <input type="number" id="precio" name="precio" class="formulario__input" value="<%= productoEditar.precio%>">
+                <label for="precio" class="formulario__label">Precio actual del producto</label>
+            </div>
+            <div class="row discount">
+                <input type="number" id="descuento" name="descuento" class="formulario__input" value="<%= productoEditar.descuento%>">
+                <label for="descuento" class="formulario__label">Descuento</label>
+            </div>
+            <div class="row discount">
+                <input type="number" id="ranking" name="ranking" class="formulario__input" min="1" max="5" value="<%= productoEditar.ranking%>">
+                <label for="ranking" class="formulario__label">Valor en estrellas</label>
+            </div>
+            <div class="row nameProduct">
+                <input type="text" id="color" name="color" class="formulario__input" value="<%= productoEditar.color%>">
+                <label for="color" class="formulario__label">Color</label>
+            </div>
+
+            <div class="row category">
+                <label for="categoria">Categorías</label>
+                <select name="categoria" id="categoria" class="formulario__select">
+                    <option value="" >-- Selecciona --</option>
+                    <option value="Hombre" <%= productoEditar.categoria == "Hombre" ? "selected" : null %>>Hombre</option>
+                    <option value="Mujer" <%= productoEditar.categoria == "Mujer" ? "selected" : null %>>Mujer</option>
+                    <option value="Niño" <%= productoEditar.categoria == "Niño" ? "selected" : null %>>Niño</option>
+                </select>
+            </div>
+
+            <div class="row category">
+                <label for="tallas">Tallas</label>
+                <select name="talla" id="tallas" class="formulario__select">
+                    <option value="">-- Selecciona --</option>
+                    <option value="36" <%= productoEditar.talla == 36 ? "selected" : null %>>36</option>
+                    <option value="37" <%= productoEditar.talla == 37 ? "selected" : null %>>37</option>
+                    <option value="38" <%= productoEditar.talla == 38 ? "selected" : null %>>38</option>
+                    <option value="39" <%= productoEditar.talla == 39 ? "selected" : null %>>39</option>
+                    <option value="40" <%= productoEditar.talla == 40 ? "selected" : null %>>40</option>
+                    <option value="41" <%= productoEditar.talla == 41 ? "selected" : null %>>41</option>
+                    <option value="42" <%= productoEditar.talla == 42 ? "selected" : null %>>42</option>
+                </select>
+            </div>
+
+            <div class="row category">
+                <label for="marca">Marcas</label>
+                <select name="marca" id="marcas" class="formulario__select">
+                    <option value="">-- Selecciona --</option>
+                    <option value="Reebok" <%= productoEditar.marca == "Reebok" ? "selected" : null %>>Reebok</option>
+                    <option value="Adidas" <%= productoEditar.marca == "Adidas" ? "selected" : null %>>Adidas</option>
+                    <option value="Nike" <%= productoEditar.marca == "Nike" ? "selected" : null %>>Nike</option>
+                </select>
+            </div>
+
+            <div class="add-new-photo first" id="add-photo">
+                <input type="file" id="imagen" name="imagen" class="formulario__input">
+                <button type="button" id="boton_add" class="boton_add">
+                    <img src="/images/products/<%= productoEditar.imagen%>">
+                    <!-- <div>
+                        <i class="fa-solid fa-image"></i>
+                    </div> -->
+                    <!-- Agrega una imagen -->
+                </button>
+                <input type="hidden"  name="oldImagen"  value="<%= productoEditar.imagen%>">
+            </div>
+
+            <div class="button saveProduct">
+                <button type="submit" class="formulario__submit">Actualizar producto</button>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="/javascripts/productEdit.js"></script>
+
+    <footer class="container-footer">
+        <%- include('../partials/footer.ejs') %>
+    </footer>
+</body>
+
+</html>

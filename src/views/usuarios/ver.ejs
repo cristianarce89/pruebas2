@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs') %>
+    <title>Lista de usuarios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <link href="/stylesheets/header.css" rel="stylesheet">
+    <link href="/stylesheets/footer.css" rel="stylesheet">
+    <link href="/stylesheets/users/users.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!--------- BARRA NAVEGADOR CELULAR Y TABLET ---------->
+        <%- include('../partials/headerMobile.ejs') %> 
+        <!--------- BARRA NAVEGADOR DESKTOP ---------->
+        <%- include('../partials/headerDesktop.ejs') %> 
+    </header>
+
+<div class="container">
+
+    <div class="profile-card">
+        <div class="card-header">
+            <div class="pic">
+                <img src="/images/users/<%= miUsers.imagen%>" alt="image_profile">
+            </div>
+            <div class="name"><%= miUsers.nombre%></div>
+            <div class="desc"><%= miUsers.email%></div>
+            <div class="desc"><%= miUsers.cellphone%></div>
+            <div class="desc"><%= miUsers.direccion%></div>
+            <div class="sm">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-github"></a>
+                <a href="#" class="fab fa-youtube"></a>
+            </div>
+        </div>
+        <div class="card-footer">
+            <a href="#" class="contact-btn-2">Editar</a>
+            <a href="#" class="contact-btn-2">Eliminar</a>
+        </div>
+    </div>
+    
+
+</div>
+
+
+    <footer class="container-footer">
+        <%- include('../partials/footer.ejs') %> 
+    </footer>
+</body>
+
+</html>

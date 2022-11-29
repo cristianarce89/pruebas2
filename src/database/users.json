@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "nombre": "carlos",
+    "correo": "carlos@carlos.com",
+    "password": "123456",
+    "cellphone": "3111111111",
+    "direccion": "calle 4 n 5-38",
+    "imagen": "carlos.jpg"
+  },
+  {
+    "nombre": "Cristian",
+    "email": "cristiancamilo_1989@hotmail.com",
+    "password": "123456",
+    "repetir_password": "123456",
+    "cellphone": "3137224934",
+    "direccion": "Cra4",
+    "id": "2",
+    "imagen": "UsuariosReeadni-1668445503212.png"
+  },
+  {
+    "id": 3,
+    "nombre": "juliana",
+    "email": "juliana@juliana",
+    "password": "123456",
+    "cellphone": "3111564877",
+    "direccion": "cra9 n 500-21",
+    "imagen": "UsuariosReeadni-1668352685314.png"
+  },
+  {
+    "id": 4,
+    "nombre": "carlos",
+    "email": "carglos@carlos.com",
+    "password": "$2b$10$VyYe68Jh6CdEze0fkZXcEOK/4xDLj.0Be9VRW9YHFp72JXzRptVSO",
+    "cellphone": "321231231",
+    "direccion": "645646",
+    "imagen": "UsuariosReeadni-1669080079111.png"
+  },
+  {
+    "id": 5,
+    "nombre": "andres",
+    "email": "andres@andres.com",
+    "password": "$2b$10$OtyUAFTbGYD.Ctjj77qKBeXavOWd1adkTw4HC5xatNuQUaJ6Yj1H6",
+    "cellphone": "6545646",
+    "direccion": "654564564",
+    "imagen": "UsuariosReeadni-1669080281420.png"
+  }
+]
